@@ -9,6 +9,11 @@ html {min-width:1260px}
 
 body {min-width:1260px; margin:0; padding:0; font:300 16px/24px MuseoSansCyrl, sans-serif; color:#4c4c4c; background:#fff; -webkit-text-size-adjust:100%}
 
+ul {margin:24px 0; padding:0; list-style:none}
+ul li {margin:24px 0; padding:0 0 0 28px; position:relative}
+ul li::before {content:""; display:block; width:9px; height:9px; position:absolute; left:2px; top:7px; border-radius:50%; background:#00959c}
+p {margin:24px 0; padding:0}
+
 a {color:#00959c}
 a:hover {text-decoration:none}
 
@@ -60,6 +65,24 @@ img {border:none; max-width:100%}
 .side-contacts-other {font-size:10px; text-transform:uppercase; padding:32px 0 0 0}
 .side-contacts-other a {text-decoration:none}
 .side-contacts-other a:hover {text-decoration:underline}
+
+.page-menu {position:fixed; left:60px; top:0; width:200px; height:100%; padding:53px 0 0 20px; background:#fff url(../images/page-menu.png) repeat-y right top; z-index:98; border-left:1px solid #fafafa; overflow:auto}
+.page-menu-logo {width:71px; height:25px; position:relative; background:url(../images/logo.png)}
+.page-menu-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
+.page-menu-category {font-weight:bold; font-size:14px; letter-spacing:0.7px; color:#111; text-transform:uppercase; padding:50px 0 0 0}
+.page-menu-category-menu ul {margin:23px 0 0 0; padding:0; list-style:none}
+.page-menu-category-menu ul li {margin:12px 0; padding:0 20px 0 0}
+.page-menu-category-menu ul li::before {display:none}
+.page-menu-category-menu a {color:#111; text-decoration:none}
+.page-menu-category-menu a:hover {text-decoration:underline}
+.page-menu-sections {font-size:13px; margin:66px 0}
+.page-menu-sections ul {margin:0; padding:0; list-style:none}
+.page-menu-sections ul li {margin:12px 0; padding:0 20px 0 0; position:relative}
+.page-menu-sections ul li.active::after {content:""; display:block; position:absolute; right:0; top:-6px; bottom:-6px; width:10px; background:#00959c}
+.page-menu-sections ul li::before {display:none}
+.page-menu-sections ul li a {color:#808080; text-decoration:none}
+.page-menu-sections ul li a:hover {color:#111}
+.page-menu-sections ul li.active a {color:#111}
 
 .wrapper {padding:0 0 0 60px; min-width:1260px; width:100%; position:relative; overflow:hidden}
 
@@ -275,3 +298,77 @@ footer {background:#00959c; padding:0 8.6%}
 .bottom-social a.bottom-social-3:hover {background-position:-38px -16px}
 .bottom-social a.bottom-social-4 {width:8px; background-position:-55px top}
 .bottom-social a.bottom-social-4:hover {background-position:-55px -16px}
+
+.page {padding:0 0 0 200px}
+
+.page-slider {width:100%; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+.page-slider-item {display:inline-block; vertical-align:top; width:100%; font-size:16px; line-height:24px; letter-spacing:0; white-space:normal}
+.production-about-main {display:table; width:100%}
+.production-about-main-2 {display:block; position:relative}
+.production-about-main-3 {min-height:100vh; padding:85px 40% 130px 10%; color:#fff; background:no-repeat center; background-size:cover}
+.production-about-main-text {display:table-cell; vertical-align:top}
+.production-about-main-text-3 {display:block}
+.production-about-main-text-inner {min-height:100vh; padding:85px 10% 130px 10%}
+.production-about-main-text-3 .production-about-main-text-inner {padding-bottom:350px; position:relative}
+.production-about-main-title {font-weight:500; font-size:34px; line-height:48px; text-transform:uppercase; color:#111}
+.production-about-main-3 .production-about-main-title {color:#fff}
+.production-about-main-descr {font-weight:100; font-size:24px; line-height:36px; margin:57px 0 0 0}
+.production-about-main-photo {display:table-cell; vertical-align:top; width:40%; background:no-repeat center top; background-size:cover}
+.production-about-main-photo-2 {width:30%}
+.production-about-main-photo-3 {display:block; position:absolute; width:auto; left:0; bottom:0; right:0; height:348px}
+
+.production-about-main-tabs-menu {text-transform:uppercase; font-weight:500; letter-spacing:0.8px; padding:69px 0 0 0}
+.production-about-main-tabs-menu ul {margin:0; padding:0; list-style:none}
+.production-about-main-tabs-menu ul::after {content:""; display:block; clear:both}
+.production-about-main-tabs-menu ul li {float:left; margin:0 0 0 30px; padding:0; position:relative}
+.production-about-main-tabs-menu ul li:first-child {margin:0}
+.production-about-main-tabs-menu ul li::before {display:none}
+.production-about-main-tabs-menu ul li a {color:rgba(0, 0, 0, .25); text-decoration:none}
+.production-about-main-tabs-menu ul li a:hover {color:#000}
+.production-about-main-tabs-menu ul li.active::after {content:""; display:block; position:absolute; left:0; bottom:0; right:0; height:2px; background:#00959c}
+.production-about-main-tabs-menu ul li.active a {color:#000}
+.production-about-main-tabs-item {margin:35px 0; display:none; min-height:48px}
+.production-about-main-tabs-item.active {display:block}
+
+.page-slider-pager {position:absolute; right:0; top:84px; background:#fafafa; padding:0 15px; height:48px; font-size:16px; line-height:48px; letter-spacing:0; color:#808080; letter-spacing:0}
+.page-slider-current {color:#111}
+.page-slider-prev,
+.page-slider-next {display:inline-block; vertical-align:middle; width:8px; height:13px; background:url(../images/page-slider-arrows.png); opacity:.25}
+.page-slider-prev {margin:-3px 15px 0 0}
+.page-slider-next {margin:-3px 0 0 15px; background-position:-8px top}
+.page-slider-prev:hover,
+.page-slider-next:hover {opacity:1}
+
+.page-slider-links {position:absolute; left:90px; top:100vh; margin-top:-130px; background:#fff; font-size:20px; line-height:60px; letter-spacing:0; padding:0 30px; color:#111}
+.page-slider-links span::after {content:""; display:inline-block; vertical-align:middle; width:22px; height:10px; background:url(../images/page-slider-links.png); margin:-2px 0 0 20px}
+.page-slider-links span {opacity:0.5; margin:0 20px 0 0; cursor:pointer}
+.page-slider-links span.active {opacity:1}
+.page-slider-links span:last-child {margin:0}
+.page-slider-links span:last-child::after {display:none}
+
+.page-one {min-height:100vh; position:relative}
+.video {position:absolute; left:0; top:0; right:0; bottom:0; background:#000 no-repeat center; background-size:cover}
+.video-play {display:block; position:relative; color:#fff; text-decoration:none; text-align:center; text-transform:uppercase; font-weight:500; letter-spacing:0.9px; font-size:36px; line-height:44px; left:0; top:50%; right:0; transform:translateY(-50%)}
+.video.play .video-play {display:none}
+.video-play::before {content:""; display:inline-block; vertical-align:middle; width:36px; height:41px; background:url(../images/video-play.png); margin:-2px 37px 0 0}
+.video iframe {display:none; position:absolute; left:0; top:0; width:100%; height:100%; z-index:1}
+.video.play iframe {display:block}
+
+.page-production-list {min-height:100vh; padding:85px 40% 130px 10%; border-bottom:1px solid #eee; background:no-repeat right bottom; background-size:auto 100%}
+.page-production-list-slider {margin:105px 0 0 0}
+.page-production-list-item {display:none}
+.page-production-list-item.active {display:block}
+.page-production-list-item-title {font-weight:500; font-size:24px; line-height:36px; text-transform:uppercase; color:#111}
+.page-production-list-item-text {padding:23px 0 0 0}
+.page-production-list-slider ul {font-size:0; line-height:0; letter-spacing:-1px; margin:0; padding:62px 0 0 0; list-style:none}
+.page-production-list-slider ul li {margin:0 0 0 13px; padding:0; display:inline-block; vertical-align:top}
+.page-production-list-slider ul li:first-child {margin:0}
+.page-production-list-slider ul li::before {display:none}
+.page-production-list-slider ul li button {display:block; width:37px; height:5px; border-radius:0; border:none; background:transparent; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px; position:relative}
+.page-production-list-slider ul li button::before {content:""; display:block; position:absolute; left:0; top:2px; bottom:2px; right:0; background:#00959c}
+.page-production-list-slider ul li.active button::before {top:0; bottom:0}
+
+.page-half {height:50vh; position:relative}
+.page-half::after {content:""; display:block; clear:both}
+.page-subhalf {float:left; width:50%; height:50vh; position:relative}
+.page-half .video-play {font-size:24px; line-height:36px}
