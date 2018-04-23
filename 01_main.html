@@ -319,63 +319,103 @@
                     <a href="#" class="main-opt-order">Стать партнёром</a>
                 </div>
                 <div class="main-opt-links">
-                    <a href="#" class="main-opt-link-1">Дистрибьютерам</a>
-                    <a href="#" class="main-opt-link-2">Розничным сетям</a>
-                    <a href="#" class="main-opt-link-3">Интернет-магазинам</a>
+                    <a href="#" class="main-opt-link-1"><span class="main-opt-link-text">Дистрибьютерам</span></a>
+                    <a href="#" class="main-opt-link-2"><span class="main-opt-link-text">Розничным сетям</span></a>
+                    <a href="#" class="main-opt-link-3"><span class="main-opt-link-text">Интернет-магазинам</span></a>
                 </div>
             </div>
             <!-- main opt END -->
 
             <!-- main produce -->
             <div class="main-produce">
-                <div class="main-produce-title">Контрактное производство</div>
-                <div class="main-produce-text">Холдинг BROCARD приглашает к долгосрочному сотрудничеству российских и зарубежных партнеров и предлагает услуги по&nbsp;контрактному производству:</div>
-                <div class="main-produce-info">
-                    <div class="main-produce-info-item">
-                        <div class="main-produce-info-number">1</div>
-                        <div class="main-produce-info-text">Полный производственный цикл «под ключ» - оказание полногокомплекса услуг от идеи до отгрузки готовой продукции.</div>
+                <div class="main-produce-bg"><div id="player" class="player"></div></div>
+                <script src="https://www.youtube.com/iframe_api"></script>
+                <script>
+                    var player;
+                    function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                            videoId: 'dMrIln0JClU',
+                            playerVars: {'controls': 0, 'rel': 0, 'showinfo': 0},
+                            events: {
+                                'onReady': function() {
+                                    player.setVolume(0);
+                                    player.playVideo();
+                                },
+                                'onStateChange': onPlayerStateChange
+                            }
+                        });
+                    }
+
+
+                    function onPlayerStateChange(event) {
+                        if (player.getPlayerState() == 0) {
+                            player.seekTo(0);
+                            player.playVideo(0);
+                        }
+                    }
+
+                    $(window).on('load resize', function() {
+                        var curWidth = $('.main-produce').outerWidth();
+                        var curHeight = $('.main-produce').outerHeight();
+                        var newWidth = curWidth;
+                        var newHeight = newWidth * .5625;
+                        if (newHeight < curHeight) {
+                            newHeight = curHeight;
+                            newWidth = newHeight / .5625;
+                        }
+                        $('.main-produce-bg').width(newWidth).height(newHeight);
+                    });
+                </script>
+                <div class="main-produce-content">
+                    <div class="main-produce-title">Контрактное производство</div>
+                    <div class="main-produce-text">Холдинг BROCARD приглашает к долгосрочному сотрудничеству российских и зарубежных партнеров и предлагает услуги по&nbsp;контрактному производству:</div>
+                    <div class="main-produce-info">
+                        <div class="main-produce-info-item">
+                            <div class="main-produce-info-number">1</div>
+                            <div class="main-produce-info-text">Полный производственный цикл «под ключ» - оказание полногокомплекса услуг от идеи до отгрузки готовой продукции.</div>
+                        </div>
+                        <div class="main-produce-info-item">
+                            <div class="main-produce-info-number">2</div>
+                            <div class="main-produce-info-text">Выполнение отдельных технологических процессов.</div>
+                        </div>
+                        <div class="main-produce-info-item">
+                            <div class="main-produce-info-number">3</div>
+                            <div class="main-produce-info-text">Производство по&nbsp;рецептуре и&nbsp;технологии заказчика.</div>
+                        </div>
+                        <div class="main-produce-info-item">
+                            <div class="main-produce-info-number">4</div>
+                            <div class="main-produce-info-text">Компания отвечает за&nbsp;качество услуг, гарантирует полное соблюдение технологического цикла, соблюдение авторских прав.</div>
+                        </div>
+                        <div class="main-produce-info-item">
+                            <div class="main-produce-info-number">5</div>
+                            <div class="main-produce-info-text">Готовая продукция в&nbsp;обязательном порядке проходит контроль полного соответствия стандартам.</div>
+                        </div>
                     </div>
-                    <div class="main-produce-info-item">
-                        <div class="main-produce-info-number">2</div>
-                        <div class="main-produce-info-text">Выполнение отдельных технологических процессов.</div>
-                    </div>
-                    <div class="main-produce-info-item">
-                        <div class="main-produce-info-number">3</div>
-                        <div class="main-produce-info-text">Производство по&nbsp;рецептуре и&nbsp;технологии заказчика.</div>
-                    </div>
-                    <div class="main-produce-info-item">
-                        <div class="main-produce-info-number">4</div>
-                        <div class="main-produce-info-text">Компания отвечает за&nbsp;качество услуг, гарантирует полное соблюдение технологического цикла, соблюдение авторских прав.</div>
-                    </div>
-                    <div class="main-produce-info-item">
-                        <div class="main-produce-info-number">5</div>
-                        <div class="main-produce-info-text">Готовая продукция в&nbsp;обязательном порядке проходит контроль полного соответствия стандартам.</div>
-                    </div>
-                </div>
-                <div class="main-produce-prefs">
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-1.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Все необходимые лицензии</div>
-                    </div>
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-2.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Сертификат ISO&nbsp;DIN&nbsp;9001</div>
-                    </div>
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-3.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Собственная аттестованная лаборатория</div>
-                    </div>
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-4.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Большие производственные мощности</div>
-                    </div>
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-5.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Современный складской комплекс</div>
-                    </div>
-                    <div class="main-produce-pref">
-                        <div class="main-produce-pref-icon"><img src="images/main-prefs-6.png" alt="" /></div>
-                        <div class="main-produce-pref-title">Удобное месторасположение</div>
+                    <div class="main-produce-prefs">
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-1.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Все необходимые лицензии</div>
+                        </div>
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-2.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Сертификат ISO&nbsp;DIN&nbsp;9001</div>
+                        </div>
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-3.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Собственная аттестованная лаборатория</div>
+                        </div>
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-4.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Большие производственные мощности</div>
+                        </div>
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-5.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Современный складской комплекс</div>
+                        </div>
+                        <div class="main-produce-pref">
+                            <div class="main-produce-pref-icon"><img src="images/main-prefs-6.png" alt="" /></div>
+                            <div class="main-produce-pref-title">Удобное месторасположение</div>
+                        </div>
                     </div>
                 </div>
             </div>
