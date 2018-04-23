@@ -101,6 +101,21 @@ $(document).ready(function() {
         curSlider.find('.page-production-list-item').eq(0).addClass('active');
     });
 
+    $(window).on('load resize', function() {
+        $('.page-production-list-slider').each(function() {
+            var curSlider = $(this);
+            var curHeight = 0;
+            curSlider.find('.page-production-list-item').css({'min-height': 0});
+            curSlider.find('.page-production-list-item').each(function() {
+                var newHeight = curSlider.find('.page-production-list-item').height();
+                if (newHeight > curHeight) {
+                    curHeight = newHeight;
+                }
+            });
+            curSlider.find('.page-production-list-item').css({'min-height': curHeight});
+        });
+    });
+
     $('body').on('click', '.page-production-list-slider-menu li button', function() {
         var curLi = $(this).parent();
         if (!curLi.hasClass('active')) {
