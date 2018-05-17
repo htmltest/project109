@@ -6,10 +6,17 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/revealator/fm.revealator.jquery.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
         <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/revealator/fm.revealator.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -98,6 +105,7 @@
                     </ul>
                 </div>
                 <div class="page-menu-sections">
+                    <div class="page-menu-sections-active"></div>
                     <ul>
                         <li><a href="#page-section-01">О производстве</a></li>
                         <li><a href="#page-section-02">Услуги контрактного производства</a></li>
@@ -122,7 +130,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Сотрудничество</div>
-                                        <div class="production-about-main-descr">BROCARD Group приглашает к долгосрочному сотрудничеству российских и зарубежных партнеров и предлагает услуги по контрактному производству.<br /> Компания BROCARD в настоящее время работает в нескольких направлениях: дистрибьюция парфюмерных изделий низкой и средней ценовых групп, дистрибьюция элитных марок,  производство парфюмерно-косметических товаров на собственном заводе.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">BROCARD Group приглашает к долгосрочному сотрудничеству российских и зарубежных партнеров и предлагает услуги по контрактному производству.<br /> Компания BROCARD в настоящее время работает в нескольких направлениях: дистрибьюция парфюмерных изделий низкой и средней ценовых групп, дистрибьюция элитных марок,  производство парфюмерно-косметических товаров на собственном заводе.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-01.jpg)"></div>
@@ -137,7 +145,7 @@
                                 <div class="production-about-main-text production-about-main-text-2">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">О производстве</div>
-                                        <div class="production-about-main-descr">Компания отвечает за качество услуг, гарантирует полное соблюдение технологического цикла, соблюдение авторских прав. Готовая продукция в обязательном порядке проходит контроль полного соответствия стандартам.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Компания отвечает за качество услуг, гарантирует полное соблюдение технологического цикла, соблюдение авторских прав. Готовая продукция в обязательном порядке проходит контроль полного соответствия стандартам.</div>
                                         <div class="production-about-main-tabs">
                                             <div class="production-about-main-tabs-menu">
                                                 <ul>
@@ -172,7 +180,7 @@
                                 <div class="production-about-main-text production-about-main-text-3">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Преимущества</div>
-                                        <div class="production-about-main-descr">Наша компания - опытный производитель парфюмерии и косметики с 2001 года. В кейсе более 1000 успешных запусков.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Наша компания - опытный производитель парфюмерии и косметики с 2001 года. В кейсе более 1000 успешных запусков.</div>
                                         <div class="production-about-main-tabs">
                                             <div class="production-about-main-tabs-menu">
                                                 <ul>
@@ -214,7 +222,7 @@
                         <div class="page-slider-item" data-title="Под ключ">
                             <div class="production-about-main-3" style="background-image:url(files/production-04.jpg)">
                                 <div class="production-about-main-title">Под ключ</div>
-                                <div class="production-about-main-descr">
+                                <div class="production-about-main-descr production-about-main-descr-small">
                                     <p>Производство парфюмерии и косметики оказывает три типа контрактных услуг:</p>
                                     <ul>
                                         <li>Полный производственный цикл «под ключ»</li>
@@ -240,7 +248,7 @@
                         <div class="page-slider-item" data-title="Перечень отдельных услуг">
                             <div class="production-about-main-3" style="background-image:url(files/production-04.jpg)">
                                 <div class="production-about-main-title">Перечень отдельных услуг</div>
-                                <div class="production-about-main-descr">
+                                <div class="production-about-main-descr production-about-main-descr-small">
                                     <p>Перечень отдельных услуг, которые оказывает производство:</p>
                                     <ul>
                                         <li>Приготовление, розлив и укупорка парфюмерно-косметической продукции</li>
@@ -316,7 +324,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Требования</div>
-                                        <div class="production-about-main-descr">Наши специалисты проконсультируют вас о всех особенностях и нюансах производства парфюмерии или косметики. Так, например, если вы собираетесь заняться производством духов или туалетной воды, одеколонов или лосьонов,  антибактериальных гелей или гелей для/после бритья, то вы должны знать и о некоторых ограничениях в производстве спиртосодержащей продукции. Ограничения действуют именно в том случае, когда заказчик предоставляет производителю отдельные комплектующие для производства продукции собственных брендов.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Наши специалисты проконсультируют вас о всех особенностях и нюансах производства парфюмерии или косметики. Так, например, если вы собираетесь заняться производством духов или туалетной воды, одеколонов или лосьонов,  антибактериальных гелей или гелей для/после бритья, то вы должны знать и о некоторых ограничениях в производстве спиртосодержащей продукции. Ограничения действуют именно в том случае, когда заказчик предоставляет производителю отдельные комплектующие для производства продукции собственных брендов.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-07.jpg)"></div>
@@ -330,7 +338,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Правовые нормы</div>
-                                        <div class="production-about-main-descr">Согласно Главе III, Статья 20, пункт 3 в ФЗ № 171-ФЗ от 22.11.95 «О государственном регулировании производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции», не допускается:  производство и оборот этилового спирта, алкогольной и спиртосодержащей продукции на договорной или бездоговорной основе для организаций, не имеющих соответствующих лицензий.<br /> Отсюда следует, что комплектующие, используемые для производства парфюмерно-косметической продукции: тара для фасовки продукции, укупорочные изделия и упаковочные материалы, носитель информации о составе и производителе, а так же сырьё для спиртосодержащей продукции должны закупаться производителем и быть его собственностью.   Не допускается производство спиртосодержащей продукции из давальческого сырья и комплектующих изделий.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Согласно Главе III, Статья 20, пункт 3 в ФЗ № 171-ФЗ от 22.11.95 «О государственном регулировании производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции», не допускается:  производство и оборот этилового спирта, алкогольной и спиртосодержащей продукции на договорной или бездоговорной основе для организаций, не имеющих соответствующих лицензий.<br /> Отсюда следует, что комплектующие, используемые для производства парфюмерно-косметической продукции: тара для фасовки продукции, укупорочные изделия и упаковочные материалы, носитель информации о составе и производителе, а так же сырьё для спиртосодержащей продукции должны закупаться производителем и быть его собственностью.   Не допускается производство спиртосодержащей продукции из давальческого сырья и комплектующих изделий.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-07.jpg)"></div>
@@ -344,7 +352,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Акцизы</div>
-                                        <div class="production-about-main-descr">Также полезно будет знать  о том, что производство спиртосодержащей продукции без акцизного сбора, ограничивается по закону. <br /> Согласно абзацу 5, п.2, ст.181, гл. 22 «Акцизы» НК РФ, вся парфюмерно–косметическая продукция, разлитая в емкости не более 100 мл. с объемной долей спирта до 80 процентов включительно и (или) парфюмерно-косметическая продукция с объемной долей этилового спирта до 90 процентов включительно, при наличии на флаконе пульверизатора, разлитая в емкости не более 100 мл., а так же парфюмерно-косметическая продукция с объемной долей этилового спирта до 90 процентов включительно, разлитая в емкости до 3 мл. включительно — не рассматривается как подакцизная.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Также полезно будет знать  о том, что производство спиртосодержащей продукции без акцизного сбора, ограничивается по закону. <br /> Согласно абзацу 5, п.2, ст.181, гл. 22 «Акцизы» НК РФ, вся парфюмерно–косметическая продукция, разлитая в емкости не более 100 мл. с объемной долей спирта до 80 процентов включительно и (или) парфюмерно-косметическая продукция с объемной долей этилового спирта до 90 процентов включительно, при наличии на флаконе пульверизатора, разлитая в емкости не более 100 мл., а так же парфюмерно-косметическая продукция с объемной долей этилового спирта до 90 процентов включительно, разлитая в емкости до 3 мл. включительно — не рассматривается как подакцизная.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-07.jpg)"></div>
@@ -417,7 +425,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Лаборатория</div>
-                                        <div class="production-about-main-descr">Разработка уникальной формулы аромата происходит в научно-экспериментальной лаборатории. В миниатюрных масштабах лаборатория повторяет весь цикл производства. В нашей лаборатории работают лучшие специалисты в сфере создания парфюмерии и косметики.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Разработка уникальной формулы аромата происходит в научно-экспериментальной лаборатории. В миниатюрных масштабах лаборатория повторяет весь цикл производства. В нашей лаборатории работают лучшие специалисты в сфере создания парфюмерии и косметики.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-11.jpg)"></div>
@@ -431,7 +439,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Тенденции</div>
-                                        <div class="production-about-main-descr">Наша компания производит парфюмерию и косметику, учитывая все желания наших покупателей и последние тенденции на рынке парфюмерно - косметических средств. Наша лаборатория контролирует качество изготовляемой парфюмерии и косметики, осуществляет исследовательские работы и анализы, а также занимается оформлением всех документов.<br /> Возможна разработка рецептур различных групп продукции: туалетная вода, парфюмерная вода, одеколон, дезодорант,  шампунь и бальзам для волос, пена для ванны, гель для душа, жидкое мыло, скраб для тела, и другой продукции.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">Наша компания производит парфюмерию и косметику, учитывая все желания наших покупателей и последние тенденции на рынке парфюмерно - косметических средств. Наша лаборатория контролирует качество изготовляемой парфюмерии и косметики, осуществляет исследовательские работы и анализы, а также занимается оформлением всех документов.<br /> Возможна разработка рецептур различных групп продукции: туалетная вода, парфюмерная вода, одеколон, дезодорант,  шампунь и бальзам для волос, пена для ванны, гель для душа, жидкое мыло, скраб для тела, и другой продукции.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-11.jpg)"></div>
@@ -445,7 +453,7 @@
                                 <div class="production-about-main-text">
                                     <div class="production-about-main-text-inner">
                                         <div class="production-about-main-title">Эксклюзивы</div>
-                                        <div class="production-about-main-descr">У Вас есть идея сделать эксклюзивный парфюмерно-косметический продукт? Тогда это к нам, специалисты нашей лаборатории помогут создать его рецептуру, мы изготовим образцы для сертификации, подготовим все необходимые документы и сертифицируем разработанный продукт.</div>
+                                        <div class="production-about-main-descr production-about-main-descr-small">У Вас есть идея сделать эксклюзивный парфюмерно-косметический продукт? Тогда это к нам, специалисты нашей лаборатории помогут создать его рецептуру, мы изготовим образцы для сертификации, подготовим все необходимые документы и сертифицируем разработанный продукт.</div>
                                     </div>
                                 </div>
                                 <div class="production-about-main-photo" style="background-image:url(files/production-11.jpg)"></div>

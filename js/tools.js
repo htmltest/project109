@@ -82,8 +82,8 @@ $(document).ready(function() {
             curLi.addClass('active');
             var curIndex = curTabs.find('.production-about-main-tabs-menu li').index(curLi);
             curTabs.find('.production-about-main-tabs-item').stop(true, true);
-            curTabs.find('.production-about-main-tabs-item:visible').fadeOut(function() {
-                curTabs.find('.production-about-main-tabs-item').eq(curIndex).fadeIn();
+            curTabs.find('.production-about-main-tabs-item:visible').fadeOut(320, function() {
+                curTabs.find('.production-about-main-tabs-item').eq(curIndex).fadeIn(320);
             });
         }
         e.preventDefault();
@@ -123,8 +123,10 @@ $(document).ready(function() {
             curSlider.find('.page-production-list-slider-menu li.active').removeClass('active');
             curLi.addClass('active');
             var curIndex = curSlider.find('.page-production-list-slider-menu li').index(curLi);
-            curSlider.find('.page-production-list-item.active').removeClass('active');
-            curSlider.find('.page-production-list-item').eq(curIndex).addClass('active');
+            curSlider.find('.page-production-list-item').stop(true, true);
+            curSlider.find('.page-production-list-item:visible').fadeOut(320, function() {
+                curSlider.find('.page-production-list-item').eq(curIndex).css({'position' : 'relative', 'left' : 'auto', 'top' : 'auto'}).fadeIn(320);
+            });
         }
     });
 
@@ -187,26 +189,183 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $(window).on('load resize scroll', function() {
-        var curScroll = $(window).scrollTop();
-        var curHeight = $(window).height();
-        if ($('.page-menu-sections').length > 0) {
-            $('.page-menu-sections ul li a').each(function() {
-                var curLink = $(this);
-                var curBlock = $(curLink.attr('href'));
-                if (curBlock.length > 0) {
-                    if (curScroll + curHeight * 2 / 3 > curBlock.offset().top) {
-                        $('.page-menu-sections ul li.active').removeClass('active');
-                        curLink.parent().addClass('active');
+    $.validator.addMethod('maskPhone',
+        function(value, element) {
+            if (value == '') {
+                return true;
+            }
+            return /^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/.test(value);
+        },
+        'Не соответствует формату'
+    );
+
+    $('form').each(function() {
+        initForm($(this));
+    });
+
+    $('.about-authors').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        variableWidth: true,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
+
+    $('.about-partners').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 3,
+        variableWidth: true,
+        adaptiveHeight: true,
+        prevArrow: '<button type="button" class="slick-prev"></button>',
+        nextArrow: '<button type="button" class="slick-next"></button>'
+    });
+
+    $('.author-catalogue-list-inner').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+
+    $('.author-catalogue-prev').click(function(e) {
+        $('.author-catalogue-list .slick-prev').trigger('click');
+        e.preventDefault();
+    });
+
+    $('.author-catalogue-next').click(function(e) {
+        $('.author-catalogue-list .slick-next').trigger('click');
+        e.preventDefault();
+    });
+
+});
+
+$(window).on('load resize scroll', function() {
+    var curScroll = $(window).scrollTop();
+    var curHeight = $(window).height();
+    if ($('.page-menu-sections').length > 0) {
+        $('.page-menu-sections ul li a').each(function() {
+            var curLink = $(this);
+            var curBlock = $(curLink.attr('href'));
+            if (curBlock.length > 0) {
+                if (curScroll + curHeight * 2 / 3 > curBlock.offset().top) {
+                    $('.page-menu-sections ul li.active').removeClass('active');
+                    curLink.parent().addClass('active');
+                }
+            }
+        });
+        var curActive = $('.page-menu-sections ul li.active');
+        $('.page-menu-sections-active').css({'height': curActive.height() + 12, 'top': curActive.offset().top - $('.page-menu-sections').offset().top - 6});
+    }
+    if (curScroll + curHeight > $('footer').offset().top) {
+        $('.page-menu').css({'top': -(curScroll + curHeight - $('footer').offset().top)});
+    } else {
+        $('.page-menu').css({'top': 0});
+    }
+});
+
+$(window).on('resize', function() {
+    $('.form-select select').chosen('destroy');
+    $('.form-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
+});
+
+function initForm(curForm) {
+    curForm.find('input.maskPhone').mask('+7 (999) 999-99-99');
+
+
+    curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
+
+    curForm.find('.form-file input').change(function() {
+        var curInput = $(this);
+        var curField = curInput.parent().parent().parent().parent();
+        curField.find('.form-file-name').html(curInput.val().replace(/.*(\/|\\)/, ''));
+        curField.find('label.error').remove();
+        curField.removeClass('error');
+    });
+
+    curForm.validate({
+        ignore: '',
+        invalidHandler: function(form, validatorcalc) {
+            validatorcalc.showErrors();
+            checkErrors();
+        }
+    });
+}
+
+function checkErrors() {
+    $('.form-checkbox, .form-file').each(function() {
+        var curField = $(this);
+        if (curField.find('input.error').length > 0) {
+            curField.addClass('error');
+        } else {
+            curField.removeClass('error');
+        }
+        if (curField.find('input.valid').length > 0) {
+            curField.addClass('valid');
+        } else {
+            curField.removeClass('valid');
+        }
+    });
+
+    $('.form-select').each(function() {
+        var curField = $(this).parent().parent();
+        if (curField.find('select.error').length > 0) {
+            curField.addClass('error');
+        } else {
+            curField.removeClass('error');
+        }
+        if (curField.find('select.valid').length > 0) {
+            curField.addClass('valid');
+        } else {
+            curField.removeClass('valid');
+        }
+    });
+}
+
+$(window).on('load resize', function() {
+    $('.news').each(function() {
+        var curList = $(this);
+
+        curList.find('.news-item').css({'min-height': '0px'});
+
+        curList.find('.news-item').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.height();
+            var curTop = curBlock.offset().top;
+
+            curList.find('.news-item').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.offset().top == curTop) {
+                    var newHeight = otherBlock.height();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
                     }
                 }
             });
-        }
-        if (curScroll + curHeight > $('footer').offset().top) {
-            $('.page-menu').css({'top': -(curScroll + curHeight - $('footer').offset().top)});
-        } else {
-            $('.page-menu').css({'top': 0});
-        }
+        });
+
+    });
+
+    $('.author-catalogue-list').each(function() {
+        var curList = $(this);
+
+        curList.find('.author-catalogue-item-title').css({'min-height': '0px'});
+
+        var curHeight = 0;
+
+        curList.find('.author-catalogue-item-title').each(function() {
+            if ($(this).outerHeight() > curHeight) {
+                curHeight = $(this).outerHeight();
+            }
+        });
+
+        curList.find('.author-catalogue-item-title').css({'min-height': curHeight + 'px'});
     });
 
 });

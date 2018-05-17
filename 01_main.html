@@ -6,10 +6,17 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/revealator/fm.revealator.jquery.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
 
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
         <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/revealator/fm.revealator.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -89,26 +96,26 @@
             <!-- main welcome -->
             <div class="main-welcome">
                 <div class="main-header">
-                    <div class="main-logo"></div>
+                    <div class="main-logo revealator-fade"></div>
                     <div class="main-header-phone"><a href="tel:+74952801250">+ 7 (495) 280-12-50</a></div>
                     <div class="main-header-user"><a href="#">Вход для партнеров</a></div>
                 </div>
 
                 <div class="main-welcome-start">
                     <div class="main-welcome-start-text">
-                        <div class="main-welcome-start-title">Мы открываем новую страницу в парфюмерном искусстве, создавая в России особенные ароматы!</div>
-                        <div class="main-welcome-start-link"><a href="#">Подробнее</a></div>
+                        <div class="main-welcome-start-title revealator-slideright">Мы открываем новую страницу в парфюмерном искусстве, создавая в России особенные ароматы!</div>
+                        <div class="main-welcome-start-link revealator-slideright revealator-delay4"><a href="#">Подробнее</a></div>
                     </div>
-                    <div class="main-welcome-start-photo">
-                        <div class="main-welcome-start-photo-text">25 лет на рынке<br /> парфюмерии</div>
+                    <div class="main-welcome-start-photo revealator-slideleft">
+                        <div class="main-welcome-start-photo-text revealator-fade revealator-delay4">25 лет на рынке<br /> парфюмерии</div>
                     </div>
                 </div>
 
-                <div class="main-welcome-title">Brocard Group –</div>
-                <div class="main-welcome-subtitle">ваш сильный и перспективный бизнес-партнер!</div>
+                <div class="main-welcome-title revealator-slideright">Brocard Group –</div>
+                <div class="main-welcome-subtitle revealator-slideleft">ваш сильный и перспективный бизнес-партнер!</div>
 
                 <div class="main-welcome-sections">
-                    <div class="main-welcome-section">
+                    <div class="main-welcome-section revealator-fade">
                         <div class="main-welcome-section-inner" style="background-image:url(images/main-welcome-section-1.jpg)">
                             <div class="main-welcome-section-title">Торговый бизнес</div>
                             <div class="main-welcome-section-menu">
@@ -122,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div class="main-welcome-section">
+                    <div class="main-welcome-section revealator-fade revealator-delay2">
                         <div class="main-welcome-section-inner" style="background-image:url(images/main-welcome-section-2.jpg)">
                             <div class="main-welcome-section-title">Контрактное производство</div>
                             <div class="main-welcome-section-menu">
@@ -137,7 +144,7 @@
                         </div>
                     </div>
 
-                    <div class="main-welcome-section">
+                    <div class="main-welcome-section revealator-fade revealator-delay4">
                         <div class="main-welcome-section-inner" style="background-image:url(images/main-welcome-section-3.jpg)">
                             <div class="main-welcome-section-title">Студия креативных разработок</div>
                             <div class="main-welcome-section-menu">
@@ -185,7 +192,7 @@
             <!-- main catalogue -->
             <div class="main-catalogue">
                 <div class="main-catalogue-col">
-                    <div class="main-catalogue-group-1">
+                    <div class="main-catalogue-group-1 revealator-slideright">
                         <div class="main-catalogue-group-title"><a href="#">Мужская парфюмерия</a></div>
                         <div class="main-catalogue-group-menu">
                             <ul>
@@ -198,7 +205,7 @@
                         </div>
                         <div class="main-catalogue-group-more"><a href="#">ещё</a></div>
                     </div>
-                    <div class="main-catalogue-group-2">
+                    <div class="main-catalogue-group-2 revealator-slideright">
                         <div class="main-catalogue-group-title"><a href="#">Парфюмерия для&nbsp;детей</a></div>
                         <div class="main-catalogue-group-menu">
                             <ul>
@@ -211,7 +218,7 @@
                         </div>
                         <div class="main-catalogue-group-more"><a href="#">ещё</a></div>
                     </div>
-                    <div class="main-catalogue-group-3">
+                    <div class="main-catalogue-group-3 revealator-slideright">
                         <div class="main-catalogue-group-title"><a href="#">Косметика</a></div>
                         <div class="main-catalogue-group-menu">
                             <ul>
@@ -226,7 +233,7 @@
                     </div>
                 </div>
                 <div class="main-catalogue-col">
-                    <div class="main-catalogue-group-4">
+                    <div class="main-catalogue-group-4 revealator-slideleft">
                         <div class="main-catalogue-group-title"><a href="#">Женская парфюмерия</a></div>
                         <div class="main-catalogue-group-menu">
                             <ul>
@@ -239,7 +246,7 @@
                         </div>
                         <div class="main-catalogue-group-more"><a href="#">ещё</a></div>
                     </div>
-                    <div class="main-catalogue-group-5">
+                    <div class="main-catalogue-group-5 revealator-slideleft">
                         <div class="main-catalogue-group-title"><a href="#">Наборы</a></div>
                         <div class="main-catalogue-group-menu">
                             <ul>
@@ -308,9 +315,9 @@
                     <a href="#" class="main-opt-order">Стать партнёром</a>
                 </div>
                 <div class="main-opt-links">
-                    <a href="#" class="main-opt-link-1"><span class="main-opt-link-text">Дистрибьюторам</span></a>
-                    <a href="#" class="main-opt-link-2"><span class="main-opt-link-text">Розничным сетям</span></a>
-                    <a href="#" class="main-opt-link-3"><span class="main-opt-link-text">Интернет-магазинам</span></a>
+                    <a href="#" class="main-opt-link-1 revealator-slideleft"><span class="main-opt-link-text">Дистрибьюторам</span></a>
+                    <a href="#" class="main-opt-link-2 revealator-slideleft revealator-delay2"><span class="main-opt-link-text">Розничным сетям</span></a>
+                    <a href="#" class="main-opt-link-3 revealator-slideleft revealator-delay4"><span class="main-opt-link-text">Интернет-магазинам</span></a>
                 </div>
             </div>
             <!-- main opt END -->
@@ -359,49 +366,49 @@
                     <div class="main-produce-title">Контрактное производство</div>
                     <div class="main-produce-text">Холдинг BROCARD приглашает к долгосрочному сотрудничеству российских и зарубежных партнеров и предлагает услуги по&nbsp;контрактному производству:</div>
                     <div class="main-produce-info">
-                        <div class="main-produce-info-item">
+                        <div class="main-produce-info-item revealator-fade">
                             <div class="main-produce-info-number">1</div>
                             <div class="main-produce-info-text">Полный производственный цикл «под ключ» - оказание полногокомплекса услуг от идеи до отгрузки готовой продукции.</div>
                         </div>
-                        <div class="main-produce-info-item">
+                        <div class="main-produce-info-item revealator-fade revealator-delay1">
                             <div class="main-produce-info-number">2</div>
                             <div class="main-produce-info-text">Выполнение отдельных технологических процессов.</div>
                         </div>
-                        <div class="main-produce-info-item">
+                        <div class="main-produce-info-item revealator-fade revealator-delay2">
                             <div class="main-produce-info-number">3</div>
                             <div class="main-produce-info-text">Производство по&nbsp;рецептуре и&nbsp;технологии заказчика.</div>
                         </div>
-                        <div class="main-produce-info-item">
+                        <div class="main-produce-info-item revealator-fade revealator-delay3">
                             <div class="main-produce-info-number">4</div>
                             <div class="main-produce-info-text">Компания отвечает за&nbsp;качество услуг, гарантирует полное соблюдение технологического цикла, соблюдение авторских прав.</div>
                         </div>
-                        <div class="main-produce-info-item">
+                        <div class="main-produce-info-item revealator-fade revealator-delay4">
                             <div class="main-produce-info-number">5</div>
                             <div class="main-produce-info-text">Готовая продукция в&nbsp;обязательном порядке проходит контроль полного соответствия стандартам.</div>
                         </div>
                     </div>
                     <div class="main-produce-prefs">
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-1.png" alt="" /></div>
                             <div class="main-produce-pref-title">Все необходимые лицензии</div>
                         </div>
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade revealator-delay1">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-2.png" alt="" /></div>
                             <div class="main-produce-pref-title">Сертификат ISO&nbsp;DIN&nbsp;9001</div>
                         </div>
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade revealator-delay2">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-3.png" alt="" /></div>
                             <div class="main-produce-pref-title">Собственная аттестованная лаборатория</div>
                         </div>
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade revealator-delay3">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-4.png" alt="" /></div>
                             <div class="main-produce-pref-title">Большие производственные мощности</div>
                         </div>
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade revealator-delay4">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-5.png" alt="" /></div>
                             <div class="main-produce-pref-title">Современный складской комплекс</div>
                         </div>
-                        <div class="main-produce-pref">
+                        <div class="main-produce-pref revealator-fade revealator-delay5">
                             <div class="main-produce-pref-icon"><img src="images/main-prefs-6.png" alt="" /></div>
                             <div class="main-produce-pref-title">Удобное месторасположение</div>
                         </div>
@@ -421,7 +428,7 @@
                             <p>Идея корпоративного подарка для бизнес-партнеров в виде индивидуально разработанного авторского аромата в&nbsp;эксклюзивном дизайнерском оформлении – возможность подчеркнуть статус и креативность Вашей компании.</p>
                         </div>
                     </div>
-                    <div class="main-studio-photo"><img src="images/main-studio.jpg" alt="" /></div>
+                    <div class="main-studio-photo revealator-slideleft"><img src="images/main-studio.jpg" alt="" /></div>
                 </div>
             </div>
             <!-- main studio END -->
