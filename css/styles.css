@@ -547,7 +547,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .video iframe {display:none; position:absolute; left:0; top:0; width:100%; height:100%; z-index:1}
 .video.play iframe {display:block}
 
-.page-production-list {min-height:100vh; padding:85px 40% 130px 10%; border-bottom:1px solid #eee; background:no-repeat right bottom; background-size:auto 100%}
+.page-production-list {min-height:100vh; padding:85px 40% 130px 56px; border-bottom:1px solid #eee; background:no-repeat right bottom; background-size:auto 100%}
 .page-production-list-slider {margin:105px 0 0 0; position:relative}
 .page-production-list-item {position:absolute; left:-9999px; top:-9999px; width:100%}
 .page-production-list-item.active {position:relative; left:auto; top:auto}
@@ -574,14 +574,13 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .about-mission-photo {float:left; width:27%; line-height:0}
 .about-mission-photo img {width:100%}
 .about-mission-text {margin:0 14% 0 36%; padding:31px 0 0 0}
-.about-mission-text .production-about-main-descr {margin:26px 0 0 0}
 .about-target {background:#f0e8f3; padding:56px 0 69px 0}
 .about-target::after {content:""; display:block; clear:both}
 .about-target .page-production-list-slider {margin:0}
 
 .about-projects {border-top:1px solid #f0f0f0; padding:89px 0 0 0}
 .about-projects .production-about-main-title {text-align:center}
-.about-projects .production-about-main-descr {text-align:center; margin:26px 10% 0 10%; position:relative}
+.about-projects .production-about-main-descr {text-align:center; margin-left:10%; margin-right:10%; position:relative}
 .about-projects-bg {line-height:0; margin:-20px 0 0 0}
 .about-projects-bg img {width:100%}
 
@@ -593,7 +592,6 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .about-where .page-production-list-slider {margin:0}
 
 .about-cooperation {padding:89px 6% 50px 6%}
-.about-cooperation .production-about-main-descr {margin:26px 0 0 0}
 
 .about-authors {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:50px -9999px 50px 0; padding:0 0 70px 0}
 .about-authors.slick-initialized {overflow:visible}
@@ -666,22 +664,18 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .business-prefs .production-about-main-3 ul li::before {top:7px}
 
 .studio-target {background:#edf5f8 url(../images/studio-target.jpg) no-repeat right bottom; padding:91px 40% 280px 56px; margin:50px 0 0 0; min-height:100vh}
-.studio-target .production-about-main-descr {margin:26px 0 0 0}
 .studio-target .page-production-list-slider {margin-top:0}
 
-.studio-task .production-about-main-descr {margin:26px 0 0 0}
 .studio-task .page-production-list-slider {margin-top:0}
 
 .studio-bref {background:url(../images/studio-bref.jpg) no-repeat left center; background-size:cover; padding:91px 56px 240px 30%; color:#fff; min-height:100vh}
 .studio-bref .production-about-main-title {color:#fff}
-.studio-bref .production-about-main-descr {margin:26px 0 0 0}
 .studio-bref .page-production-list-slider {margin-top:0}
 .studio-bref .production-about-main-text-inner {min-height:0; padding-top:0; padding-bottom:0}
 .studio-bref .page-production-list-slider-menu ul li button::before {background:#fff}
 .studio-bref .page-production-list-slider-menu ul li button:hover::before {background:#fff}
 .studio-bref .page-production-list-slider-menu ul li.active button::before {background:#fff}
 
-.studio-parfum .production-about-main-descr {margin:26px 0 0 0}
 .studio-parfum .page-production-list-slider {margin-top:0}
 
 .studio-partners {width:240px; margin:0 auto; padding:99px 0 0 0}
@@ -696,7 +690,6 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .portfolio-type-1-photo {float:right; width:30%; line-height:0; position:relative; overflow:hidden}
 .portfolio-type-1-photo img {max-width:none; height:100vh}
 .portfolio-type-1-text {margin:0 40% 0 56px; padding:91px 0 0 0}
-.portfolio-type-1 .production-about-main-descr {margin:26px 0 0 0}
 .portfolio-type-1-descr {color:#000; margin:22px 0 0 0}
 .portfolio-type-2 {background:#000 no-repeat center; background-size:cover; padding:0 0 470px 0; min-height:100vh}
 .portfolio-type-2 .production-about-main-title {color:#fff}
@@ -717,6 +710,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .news-item:nth-child(4n-3),
 .news-item:nth-child(4n-2) {background:#ecf5f8}
 .news-item-preview {padding:51px 0 0 0}
+.news-item-preview img {width:100%}
 .news-item-title {font-size:24px; line-height:36px; letter-spacing:0; color:#5e6264; padding:22px 0 0 0}
 .news-item-date {font-size:15px; line-height:36px; letter-spacing:0; color:#5e6264; padding:3px 0 0 0}
 .news-item-anonce {font-size:16px; line-height:28px; letter-spacing:0; color:#000; margin:-3px 0 0 0}
@@ -753,7 +747,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .contacts-map {float:right; width:50%; margin:-177px -56px -50px 0; position:relative}
 .contacts-map-inner {height:100vh; min-height:860px}
 
-.contacts-map-links {position:absolute; left:28px; top:83px; right:28px; background:#fff; text-align:center; text-transform:uppercase; padding:19px 0 20px 0}
+.contacts-map-links {position:absolute; left:50%; top:83px; margin-left:-205px; width:410px; font-size:15px; background:#fff; text-align:center; text-transform:uppercase; padding:19px 0 20px 0}
 .contacts-map-links a {color:#888; display:inline-block; vertical-align:top; margin:0 0 0 12px}
 .contacts-map-links a:first-child {margin:0}
 .contacts-map-links a:hover {color:#111}
@@ -792,7 +786,6 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .author-catalogue-list .slick-prev,
 .author-catalogue-list .slick-next {display:none !important}
 
-.rewards-slider .production-about-main-descr {margin:26px 0 0 0}
 .rewards-slider .page-production-list-slider {margin-top:0; color:#000}
 .rewards-slider .page-slider-links {left:30%; margin-left:-30px}
 
