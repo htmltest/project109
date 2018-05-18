@@ -208,7 +208,7 @@ form {margin:10px 0; padding:0}
 .side-contacts-other a:hover {text-decoration:underline}
 
 .page-menu {position:fixed; left:60px; top:0; width:200px; height:100%; padding:53px 0 0 20px; background:#fff url(../images/page-menu.png) repeat-y right top; z-index:98; border-left:1px solid #fafafa; overflow:auto}
-.page-menu-logo {width:71px; height:25px; position:relative; background:url(../images/logo.png)}
+.page-menu-logo {width:115px; height:40px; position:relative; background:url(../images/logo.svg); background-size:100%}
 .page-menu-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 .page-menu-category {font-weight:bold; font-size:14px; letter-spacing:0.7px; color:#111; text-transform:uppercase; padding:50px 0 0 0}
 .page-menu-category-menu ul {margin:23px 0 0 0; padding:0; list-style:none}
@@ -230,9 +230,9 @@ form {margin:10px 0; padding:0}
 
 .main-welcome {background:#00959c; padding:0 8.6% 96px 8.6%; color:#fff}
 
-.main-header {padding:81px 0 102px 0}
+.main-header {padding:80px 0 60px 0}
 .main-header::after {content:""; display:block; clear:both}
-.main-logo {float:left; width:171px; height:57px; background:url(../images/main-logo.png)}
+.main-logo {float:left; width:200px; height:67px; background:url(../images/main-logo.svg); background-size:100%}
 .main-header-phone {float:right; font-weight:500; font-size:15px; color:#fff}
 .main-header-phone a {display:block; color:#fff; text-decoration:none; padding:0 0 0 26px; background:url(../images/main-header-phone.png) no-repeat left 3px}
 .main-header-phone a:hover {text-decoration:underline}
@@ -247,47 +247,39 @@ form {margin:10px 0; padding:0}
 
 .main-welcome-start::after {content:""; display:block; clear:both}
 .main-welcome-start-text {float:left; width:100%; position:relative; z-index:1}
-.main-welcome-start-title {font-size:50px; line-height:65px; padding:85px 0 0 0}
-.main-welcome-start-link {width:34%; padding:83px 0 0 0}
+.main-welcome-start-title {font-size:50px; line-height:60px; padding:20px 0 0 0}
+.main-welcome-start-link {width:34%; padding:43px 0 0 0}
 .main-welcome-start-link a {display:block; overflow:hidden; text-decoration:none; color:#fff; border:2px solid #fff; position:relative; height:72px; padding:0 0 0 30px; font-weight:500; font-size:16px; line-height:68px; letter-spacing:0.8px}
 .main-welcome-start-link a::before {content:""; display:block; background:#fff; height:155px; left:-75px; opacity:.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .main-welcome-start-link a:hover::before {left:120%}
 .main-welcome-start-link a::after {content:""; display:block; position:absolute; width:10px; height:17px; right:28px; top:50%; margin-top:-9px; background:url(../images/main-welcome-start-link.png)}
-.main-welcome-start-photo {float:left; width:58.89%; margin:0 0 0 -58.89%; line-height:0; position:relative; height:400px; background:url(../images/welcome-start.jpg) no-repeat center; background-size:cover}
-.main-welcome-start-photo::before {content:""; display:block; position:absolute; left:20px; top:20px; right:-20px; bottom:-20px; border-right:20px solid rgba(0, 0, 0, .25); border-bottom:20px solid rgba(0, 0, 0, .25)}
-.main-welcome-start-photo-text {position:absolute; right:48px; bottom:40px; font-size:18px; line-height:24px; color:rgba(255, 255, 255, .9)}
+.main-welcome-start-photo {float:left; width:48.89%; margin:0 0 0 -48.89%; line-height:0; position:relative; height:350px; background:url(../images/welcome-start.jpg) no-repeat center; background-size:cover}
+.main-welcome-start-photo::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:#353535; opacity:.5; transition:all .2s}
+.main-welcome-start:hover .main-welcome-start-photo::before {opacity:0}
+.main-welcome-start-photo::after {content:""; display:block; position:absolute; left:20px; top:20px; right:-20px; bottom:-20px; border-right:20px solid rgba(0, 0, 0, .25); border-bottom:20px solid rgba(0, 0, 0, .25)}
+.main-welcome-start-photo-text {position:absolute; z-index:1; right:48px; bottom:40px; font-size:18px; line-height:24px; color:rgba(255, 255, 255, .9)}
 .main-welcome-start-photo-text::before {content:""; display:block; width:58px; height:70px; position:absolute; left:-78px; top:50%; margin-top:-35px; background:url(../images/main-welcome-start-photo-icon.png)}
 
-@media screen and (min-width:1680px) {
-    .main-welcome-start-title {font-size:90px; line-height:96px}
-    .main-welcome-start-photo {height:648px}
-    .main-welcome-start-photo-text {right:auto; left:170px}
-    .main-welcome-start-photo {height:550px}
-}
+.main-welcome-title {font-size:60px; line-height:66px; text-transform:uppercase; padding:65px 0 0 0}
+.main-welcome-subtitle {font-size:50px; line-height:56px}
 
-.main-welcome-title {font-size:68px; line-height:72px; text-transform:uppercase; padding:135px 0 0 0}
-.main-welcome-subtitle {font-size:45px; line-height:48px; padding:20px 0 0 0}
-
-@media screen and (min-width:1600px) {
-    .main-welcome-title {font-size:90px; line-height:96px}
-    .main-welcome-subtitle {font-size:60px; line-height:66px}
-}
-
-.main-welcome-sections {margin:124px -15px 0 -15px}
+.main-welcome-sections {margin:40px -15px 0 -15px}
 .main-welcome-sections::after {content:""; display:block; clear:both}
 .main-welcome-section {float:left; padding:12px 15px; width:50%}
 .main-welcome-section:last-child {width:100%}
 .main-welcome-section-inner {height:480px; position:relative; background:no-repeat center; background-size:cover}
 .main-welcome-section:last-child .main-welcome-section-inner {height:324px}
+.main-welcome-section-inner::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:#353535; opacity:.5; transition:all .2s}
+.main-welcome-section-inner:hover::before {opacity:0}
 .main-welcome-section-inner {padding:0 50px}
-.main-welcome-section-inner::before {content:""; display:block; position:absolute; left:10px; top:10px; right:-10px; bottom:-10px; border-right:10px solid rgba(0, 0, 0, .1); border-bottom:10px solid rgba(0, 0, 0, .1)}
-.main-welcome-section-title {position:relative; font-size:40px; line-height:48px; text-transform:uppercase; padding:58px 0 0 0; max-width:470px}
-.main-welcome-section-menu {font-size:20px; line-height:36px; padding:30px 0 0 0; position:relative}
+.main-welcome-section-inner::after {content:""; display:block; position:absolute; left:10px; top:10px; right:-10px; bottom:-10px; border-right:10px solid rgba(0, 0, 0, .1); border-bottom:10px solid rgba(0, 0, 0, .1)}
+.main-welcome-section-title {position:relative; font-size:32px; line-height:40px; text-transform:uppercase; padding:58px 0 0 0; max-width:470px; z-index:1}
+.main-welcome-section-menu {font-size:20px; line-height:36px; padding:30px 0 0 0; position:relative; z-index:1}
 .main-welcome-section-menu a {color:#d0f1f3}
 .main-welcome-section-menu ul {margin:0; padding:0; list-style:none}
 .main-welcome-section-menu ul li {margin:0; padding:0}
 .main-welcome-section-menu ul li::before {display:none}
-.main-welcome-section-icon {position:absolute; left:140px; bottom:40px; font-size:18px; line-height:24px; color:rgba(255, 255, 255, .9)}
+.main-welcome-section-icon {position:absolute; left:140px; bottom:40px; font-size:18px; line-height:24px; color:rgba(255, 255, 255, .9); z-index:1}
 .main-welcome-section-icon-1::before {content:""; display:block; width:70px; height:57px; position:absolute; left:-88px; top:50%; margin-top:-29px; background:url(../images/main-welcome-section-icon-1.png)}
 .main-welcome-section-icon-2::before {content:""; display:block; width:70px; height:70px; position:absolute; left:-88px; top:50%; margin-top:-35px; background:url(../images/main-welcome-section-icon-2.png)}
 .main-welcome-section-icon-3 {left:auto; right:48px}
@@ -400,7 +392,7 @@ a.main-opt-order:hover::before {opacity:1}
 .main-produce-text {font-size:30px; line-height:36px; padding:58px 0 0 0}
 .main-produce-info {margin:0 -15px; padding:61px 0 0 0}
 .main-produce-info::after {content:""; display:block; clear:both}
-.main-produce-info-item {float:left; width:20%; padding:0 15px; line-height:20px; color:#fff}
+.main-produce-info-item {float:left; width:25%; padding:0 15px; line-height:20px; color:#fff}
 .main-produce-info-number {color:#46e6ec}
 .main-produce-info-text {padding:16px 0 0 0}
 .main-produce-prefs {margin:0 -15px; text-align:center; padding:78px 0 0 0}
@@ -418,14 +410,14 @@ a.main-opt-order:hover::before {opacity:1}
     .main-produce-bg {display:none}
 }
 
-.main-studio {padding:94px 0 0 8.6%}
+.main-studio {padding:94px 0 0 8.6%; position:relative; overflow:hidden}
 .main-studio-inner {display:table; width:100%}
 .main-studio-text {display:table-cell; vertical-align:top; padding:0 30px 0 0}
 .main-studio-title {font-size:68px; line-height:72px; text-transform:uppercase; color:#111; padding:39px 0 0 0}
 .main-studio-anonce {font-size:24px; line-height:36px; padding:56px 0 0 0}
 .main-studio-descr {margin:43px 0}
 .main-studio-descr p {margin:24px 0; padding:0}
-.main-studio-photo {display:table-cell; vertical-align:bottom; width:596px; line-height:0}
+.main-studio-photo {display:table-cell; vertical-align:bottom; width:596px; line-height:0; position:relative; top:-500px}
 
 footer {background:#00959c; padding:0 8.6%}
 
@@ -446,20 +438,15 @@ footer {background:#00959c; padding:0 8.6%}
 .bottom-inner {margin:0 -15px}
 .bottom-inner::after {content:""; display:block; clear:both}
 
-.bottom-contacts {float:left; width:25%; padding:0 15px}
-.bottom-contacts-big {width:55%}
+.bottom-contacts {float:left; width:30%; padding:0 15px}
+.bottom-contacts-big {width:50%}
 .bottom-contacts-title {font-size:14px; font-weight:500; text-transform:uppercase; color:#fff; padding:2px 0 0 0}
 .bottom-contacts-item {float:left; font-size:14px}
-.bottom-contacts-item+.bottom-contacts-item {margin:0 0 0 25px}
+.bottom-contacts-big .bottom-contacts-item {width:45%}
 .bottom-contacts-address {color:#fff; padding:24px 0 0 0}
 .bottom-contacts-list {color:#9adfda; padding:24px 0 0 0}
 .bottom-contacts-list a {color:#9adfda; text-decoration:none}
 .bottom-contacts-list p {margin:0; padding:0}
-
-@media screen and (min-width:1500px) {
-    .bottom-contacts-big .bottom-contacts-item {width:40%}
-    .bottom-contacts-big .bottom-contacts-item+.bottom-contacts-item {margin:0}
-}
 
 .bottom-right {float:right; width:20%; padding:0 15px}
 
@@ -470,16 +457,18 @@ footer {background:#00959c; padding:0 8.6%}
 .bottom-search-input input:-ms-input-placeholder {opacity:1; color:rgba(17, 17, 17, .5)}
 
 .bottom-social {font-size:0; line-height:0; letter-spacing:-1px; text-align:right; padding:134px 0 0 0}
-.bottom-social a {display:inline-block; vertical-align:middle; height:16px; background:url(../images/bottom-social.png); margin:0 0 0 22px}
+.bottom-social a {display:inline-block; vertical-align:middle; height:16px; background:url(../images/bottom-social.png); margin:0 0 0 22px; position:relative}
 .bottom-social a:first-child {margin:0}
 .bottom-social a.bottom-social-1 {width:20px; background-position:left top}
-.bottom-social a.bottom-social-1:hover {background-position:left -16px}
 .bottom-social a.bottom-social-2 {width:16px; background-position:-21px top}
-.bottom-social a.bottom-social-2:hover {background-position:-21px -16px}
 .bottom-social a.bottom-social-3 {width:16px; background-position:-38px top}
-.bottom-social a.bottom-social-3:hover {background-position:-38px -16px}
 .bottom-social a.bottom-social-4 {width:8px; background-position:-55px top}
-.bottom-social a.bottom-social-4:hover {background-position:-55px -16px}
+.bottom-social a::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; opacity:0; transition:opacity 0.3s; background:url(../images/bottom-social.png)}
+.bottom-social a:hover::before {opacity:1}
+.bottom-social a.bottom-social-1::before {background-position:left -17px}
+.bottom-social a.bottom-social-2::before {background-position:-21px -17px}
+.bottom-social a.bottom-social-3::before {background-position:-38px -17px}
+.bottom-social a.bottom-social-4::before {background-position:-55px -17px}
 
 .page {padding:0 0 0 200px}
 
@@ -508,6 +497,10 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 
 @media screen and (max-width:1680px) {
     .production-about-main-descr-small {font-size:16px; line-height:24px}
+}
+
+@media screen and (min-width:1600px) {
+    .production-about-main-3 ul li {margin:5px 0}
 }
 
 .production-about-main-tabs-menu {text-transform:uppercase; font-weight:500; letter-spacing:0.8px; padding:69px 0 0 0}
@@ -569,15 +562,6 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 
 .content {padding:0 56px 50px 56px}
 
-.about-mission {background:#f0e8f3; padding:74px 0 0 0}
-.about-mission::after {content:""; display:block; clear:both}
-.about-mission-photo {float:left; width:27%; line-height:0}
-.about-mission-photo img {width:100%}
-.about-mission-text {margin:0 14% 0 36%; padding:31px 0 0 0}
-.about-target {background:#f0e8f3; padding:56px 0 69px 0}
-.about-target::after {content:""; display:block; clear:both}
-.about-target .page-production-list-slider {margin:0}
-
 .about-projects {border-top:1px solid #f0f0f0; padding:89px 0 0 0}
 .about-projects .production-about-main-title {text-align:center}
 .about-projects .production-about-main-descr {text-align:center; margin-left:10%; margin-right:10%; position:relative}
@@ -631,11 +615,12 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .history-item-year {position:relative; background:#fff; color:#000; font-weight:500; font-size:34px; line-height:43px}
 .history-bg .history-item-year {background:#ecf5f8}
 .history-item-content {padding:0 110px 0 110px}
-.history-item-title {font-size:24px; line-height:36px; color:#4c4c4c; position:relative; margin:70px 0 30px 0}
+.history-item-content h3 {margin-top:22px}
+.history-item-title {font-size:24px; line-height:36px; color:#4c4c4c; position:relative; margin:50px 0 20px 0}
 .history-item-title::before {content:""; display:block; position:absolute; left:-74px; top:17px; width:51px; height:1px; background:#00959c}
-.history-item-photos {margin:30px -24px 0 -24px; font-size:0; line-height:0; letter-spacing:-1px}
-.history-item-photo {display:inline-block; vertical-align:top; width:50%; padding:0 24px}
-.history-item-photo img {width:100%; box-shadow:0 2px 62px 0 rgba(31, 36, 37, 0.06)}
+.history-item-photos {margin:20px -24px 0 -24px; font-size:0; line-height:0; letter-spacing:-1px}
+.history-item-photo {display:inline-block; vertical-align:top; max-width:50%; padding:0 24px}
+.history-item-photo img {box-shadow:0 2px 62px 0 rgba(31, 36, 37, 0.06)}
 
 .bussines-card {background:#f3f7f9; padding:0 50px; margin:49px 0}
 .page-slider-border-bottom+.content {padding-top:51px}

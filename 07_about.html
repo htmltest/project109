@@ -17,6 +17,7 @@
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.parallax-scroll.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width" />
@@ -51,7 +52,12 @@
                                         <li><a href="#">Контакты</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Бизнес</a></li>
+                                <li>
+                                    <a href="#">Бизнес</a>
+                                    <ul>
+                                        <li><a href="#">Анкета партнера</a></li>
+                                    </ul>
+                                </li>
                                 <li>
                                     <a href="#">Производство</a>
                                     <ul>
@@ -112,6 +118,7 @@
                         <li><a href="#page-section-03">Миссия</a></li>
                         <li><a href="#page-section-04">Цель</a></li>
                         <li><a href="#page-section-05">Персонал</a></li>
+                        <li><a href="#page-section-06">Реализованные проекты</a></li>
                         <li><a href="#page-section-07">Конкурсы</a></li>
                         <li><a href="#page-section-08">Сотрудничаем</a></li>
                         <li><a href="#page-section-09">Где представлены</a></li>
@@ -159,34 +166,18 @@
                 </div>
                 <!-- page slider END -->
 
-                <!-- about mission -->
-                <div class="about-mission" id="page-section-03">
-                    <div class="about-mission-photo"><img src="files/about-02.jpg" alt="" /></div>
-                    <div class="about-mission-text">
-                        <div class="production-about-main-title">Миссия «Brocard Group»</div>
-                        <div class="production-about-main-descr">Мы открываем новую страницу в&nbsp;парфюмерном искусстве, создавая в&nbsp;России особенные ароматы.</div>
-                    </div>
-                </div>
-                <!-- about mission END -->
-
-                <!-- about target -->
-                <div class="about-target" id="page-section-04">
-                    <div class="about-mission-photo"><img src="files/about-03.jpg" alt="" /></div>
-                    <div class="about-mission-text">
-                        <div class="production-about-main-title">цель</div>
-                        <div class="page-production-list-slider">
-                            <div class="page-production-list-item">
-                                <div class="production-about-main-descr">Сегодня компания Brocard, перенимая эстафету у своих знаменитых предшественников, ставит перед собой цель вывести российскую парфюмерную промышленность на тот высочайший уровень качества ароматов и упаковки, которым по праву гордились российские парфюмеры прошлых столетий.</div>
-                            </div>
-                            <div class="page-production-list-item">
-                                <div class="production-about-main-descr">Текст 2</div>
-                            </div>
-
-                            <div class="page-production-list-slider-menu"></div>
+                <div class="production-about-main" id="page-section-03">
+                    <div class="production-about-main-photo production-about-main-photo-2" style="background-image:url(files/about-04.jpg)"></div>
+                    <div class="production-about-main-text production-about-main-text-2">
+                        <div class="production-about-main-text-inner">
+                            <div class="production-about-main-title">Цель и миссия</div>
+                            <div class="production-about-main-descr">Миссия «Brocard Group»</div>
+                            <p>Мы открываем новую страницу в&nbsp;парфюмерном искусстве, создавая в&nbsp;России особенные ароматы.</p>
+                            <div class="production-about-main-descr" id="page-section-04">Цель</div>
+                            <p>Сегодня компания Brocard, перенимая эстафету у своих знаменитых предшественников, ставит перед собой цель вывести российскую парфюмерную промышленность на тот высочайший уровень качества ароматов и упаковки, которым по праву гордились российские парфюмеры прошлых столетий.</p>
                         </div>
                     </div>
                 </div>
-                <!-- about target END -->
 
                 <!-- page slider -->
                 <div class="page-slider" id="page-section-05">
@@ -242,7 +233,7 @@
                 <!-- page slider END -->
 
                 <!-- about projects -->
-                <div class="about-projects">
+                <div class="about-projects" id="page-section-06">
                     <div class="production-about-main-title">В настоящее время создано<br /> более 1000 успешных проектов</div>
                     <div class="production-about-main-descr">Такие известные ароматы как: «Secret&nbsp;Service», «L`adieu&nbsp;Aux&nbsp;Armes», «Cветская&nbsp;Львица», «Ароматы&nbsp;природы», и&nbsp;многие другие</div>
                     <div class="about-projects-bg"><img src="files/about-05.jpg" alt="" /></div>
@@ -396,6 +387,11 @@
 
                     <div class="footer-menu-item">
                         <div class="footer-menu-title"><a href="#">Бизнес</a></div>
+                        <div class="footer-menu-list">
+                            <ul>
+                                <li><a href="#">Анкета партнера</a></li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="footer-menu-item">
