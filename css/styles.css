@@ -163,7 +163,7 @@ form {margin:10px 0; padding:0}
 .form-submit .btn {padding:0; display:block; width:100%}
 
 .side {position:fixed; left:0; top:0; bottom:0; width:60px; background:#fff; z-index:99}
-.side-menu-link {position:absolute; left:0; top:0; z-index:1; padding:60px 0 0 0; width:60px; bottom:0; display:block; text-decoration:none; color:#111; font-weight:bold; font-size:12px; line-height:60px; overflow:hidden; text-transform:uppercase; letter-spacing:6px}
+.side-menu-link {position:absolute; z-index:99; left:0; top:0; background:#fff; padding:60px 0 0 0; width:60px; bottom:0; display:block; text-decoration:none; color:#111; font-weight:bold; font-size:12px; line-height:60px; overflow:hidden; text-transform:uppercase; letter-spacing:6px; transition:all .3s}
 .side-menu-link-icon {display:block; width:17px; height:16px; position:relative; margin:0 auto 16px auto}
 .side-menu-link-icon::before {content:""; display:block; position:absolute; left:0; top:0; right:0; height:2px; background:#111; transition:all .3s}
 .side-open .side-menu-link-icon::before {top:7px; transform:rotate(45deg)}
@@ -181,7 +181,7 @@ form {margin:10px 0; padding:0}
 .side-menu-main ul {margin:0; padding:0; list-style:none}
 .side-menu-main ul li {margin:24px 0 0 0; padding:0 50px}
 .side-menu-main ul li::before {display:none}
-.side-menu-main ul li a {color:#111; text-decoration:none; display:block; width:207px; position:relative}
+.side-menu-main ul li a {color:#111; text-decoration:none; display:block; width:207px; position:relative; transition:all .3s}
 .side-menu-main ul li a:hover {color:#00959c}
 .side-menu-main ul li.with-submenu a::after {content:""; display:block; width:6px; height:10px; background:url(../images/side-menu-main.png); position:absolute; right:0; top:50%; margin-top:-5px}
 .side-menu-main ul li.with-submenu.open a {color:#00959c}
@@ -192,7 +192,7 @@ form {margin:10px 0; padding:0}
 .side-menu-sub ul {margin:0; padding:0; list-style:none}
 .side-menu-sub ul li {margin:0; padding:0}
 .side-menu-sub ul li::before {display:none}
-.side-menu-sub ul li a {color:#111; text-decoration:none}
+.side-menu-sub ul li a {color:#111; text-decoration:none; transition:all .3s}
 .side-menu-sub ul li a:hover {color:#00959c}
 .side-contacts {background:#f2f2f2; margin:0 0 0 -1px; padding:0 50px 10px 50px}
 .side-contacts-country {text-transform:uppercase; font-weight:bold; font-size:14px; color:#111; padding:26px 0 0 0}
@@ -201,13 +201,13 @@ form {margin:10px 0; padding:0}
 .side-contacts-info-row {display:table-row}
 .side-contacts-info-name {display:table-cell; vertical-align:top; padding:0 20px 0 0; color:#808080}
 .side-contacts-info-value {display:table-cell; vertical-align:top; color:#111}
-.side-contacts-info-value a {text-decoration:none}
+.side-contacts-info-value a {text-decoration:none; transition:all .3s}
 .side-contacts-info-value a:hover {text-decoration:underline}
 .side-contacts-other {font-size:12px; text-transform:uppercase; padding:32px 0 0 0}
-.side-contacts-other a {text-decoration:none}
+.side-contacts-other a {text-decoration:none; transition:all .3s}
 .side-contacts-other a:hover {text-decoration:underline}
 
-.page-menu {position:fixed; left:60px; top:0; width:200px; height:100%; padding:53px 0 0 20px; background:#fff url(../images/page-menu.png) repeat-y right top; z-index:98; border-left:1px solid #fafafa; overflow:auto}
+.page-menu {position:fixed; left:60px; top:0; width:200px; height:100%; padding:38px 0 0 20px; background:#fff url(../images/page-menu.png) repeat-y right top; z-index:98; border-left:1px solid #fafafa; overflow:auto}
 .page-menu-logo {width:115px; height:40px; position:relative; background:url(../images/logo.svg); background-size:100%}
 .page-menu-logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 .page-menu-category {font-weight:bold; font-size:14px; letter-spacing:0.7px; color:#111; text-transform:uppercase; padding:50px 0 0 0}
@@ -222,7 +222,7 @@ form {margin:10px 0; padding:0}
 .page-menu-sections ul {margin:0; padding:0; list-style:none}
 .page-menu-sections ul li {margin:12px 0; padding:0 30px 0 0; position:relative}
 .page-menu-sections ul li::before {display:none}
-.page-menu-sections ul li a {display:block; margin:0 -20px 0 0; color:#808080; text-decoration:none}
+.page-menu-sections ul li a {display:block; margin:0 -20px 0 0; color:#808080; text-decoration:none; transition:all .3s}
 .page-menu-sections ul li a:hover {color:#111}
 .page-menu-sections ul li.active a {color:#111}
 
@@ -263,12 +263,31 @@ form {margin:10px 0; padding:0}
 .main-welcome-title {font-size:60px; line-height:66px; text-transform:uppercase; padding:65px 0 0 0}
 .main-welcome-subtitle {font-size:50px; line-height:56px}
 
+@media screen and (max-width:1679px) {
+    .main-welcome-start-title {font-size:50px; line-height:60px}
+    .main-welcome-title {font-size:50px; line-height:56px;  padding:50px 0 0 0}
+    .main-welcome-subtitle {font-size:40px; line-height:48px}
+    .main-welcome-start-photo {height:300px}
+}
+
+@media screen and (max-width:1440px) {
+    .main-welcome-start-title {font-size:40px; line-height:48px}
+    .main-welcome-title {font-size:40px; line-height:48px;  padding:35px 0 0 0}
+    .main-welcome-subtitle {font-size:30px; line-height:36px}
+    .main-welcome-start-photo {height:250px}
+}
+
+@media screen and (max-width:1280px) {
+    .main-welcome-start-title {font-size:24px; line-height:30px}
+    .main-welcome-title {font-size:24px; line-height:30px; padding:20px 0 0 0}
+    .main-welcome-subtitle {font-size:20px; line-height:24px}
+    .main-welcome-start-link a {height:52px; line-height:48px}
+}
+
 .main-welcome-sections {margin:40px -15px 0 -15px}
 .main-welcome-sections::after {content:""; display:block; clear:both}
-.main-welcome-section {float:left; padding:12px 15px; width:50%}
-.main-welcome-section:last-child {width:100%}
+.main-welcome-section {float:left; padding:12px 15px; width:33.33%}
 .main-welcome-section-inner {height:480px; position:relative; background:no-repeat center; background-size:cover}
-.main-welcome-section:last-child .main-welcome-section-inner {height:324px}
 .main-welcome-section-inner::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:#353535; opacity:.5; transition:all .2s}
 .main-welcome-section-inner:hover::before {opacity:0}
 .main-welcome-section-inner {padding:0 50px}
@@ -282,14 +301,15 @@ form {margin:10px 0; padding:0}
 .main-welcome-section-icon {position:absolute; left:140px; bottom:40px; font-size:18px; line-height:24px; color:rgba(255, 255, 255, .9); z-index:1}
 .main-welcome-section-icon-1::before {content:""; display:block; width:70px; height:57px; position:absolute; left:-88px; top:50%; margin-top:-29px; background:url(../images/main-welcome-section-icon-1.png)}
 .main-welcome-section-icon-2::before {content:""; display:block; width:70px; height:70px; position:absolute; left:-88px; top:50%; margin-top:-35px; background:url(../images/main-welcome-section-icon-2.png)}
-.main-welcome-section-icon-3 {left:auto; right:48px}
+.main-welcome-section-icon-3 {left:140px}
 .main-welcome-section-icon-3::before {content:""; display:block; width:66px; height:70px; position:absolute; left:-88px; top:50%; margin-top:-35px; background:url(../images/main-welcome-section-icon-3.png)}
 
-@media screen and (min-width:1600px) {
-    .main-welcome-section {width:33.33%}
-    .main-welcome-section:last-child {width:33.33%}
-    .main-welcome-section:last-child .main-welcome-section-inner {height:480px}
-    .main-welcome-section-icon-3 {left:140px; right:auto}
+@media screen and (max-width:1440px) {
+    .main-welcome-section-title {font-size:28px; line-height:34px; padding:38px 0 0 0}
+}
+
+@media screen and (max-width:1280px) {
+    .main-welcome-section-title {font-size:24px; line-height:30px; padding:18px 0 0 0}
 }
 
 .slider {position:relative}
@@ -648,11 +668,8 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .business-prefs .production-about-main-3 ul li {margin:10px 0}
 .business-prefs .production-about-main-3 ul li::before {top:7px}
 
-.studio-target {background:#edf5f8 url(../images/studio-target.jpg) no-repeat right bottom; padding:91px 40% 280px 56px; margin:50px 0 0 0; min-height:100vh}
-.studio-target .page-production-list-slider {margin-top:0}
-.studio-target .production-about-main-descr {padding-bottom:91px}
-
-.studio-task .page-production-list-slider {margin-top:0}
+.studio-target {border-top:1px solid #eee}
+.studio-target .production-about-main-descr {margin-bottom:91px}
 
 .studio-bref {background:url(../images/studio-bref.jpg) no-repeat left center; background-size:cover; padding:91px 56px 240px 30%; color:#fff; min-height:100vh}
 .studio-bref .production-about-main-title {color:#fff}
@@ -663,7 +680,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .studio-bref .page-production-list-slider-menu ul li.active button::before {background:#fff}
 
 .studio-parfum .page-production-list-slider {margin-top:0}
-.studio-parfum .about-partner-item {text-align:center; display:block; margin-top:20px}
+.studio-parfum .about-authors-item {margin-top:20px}
 
 .studio-partners {width:240px; margin:0 auto; padding:99px 0 0 0}
 .studio-partner-item {padding:0 0 20px 0}
@@ -782,4 +799,5 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .rewards-one-descr {color:#fff; padding:57px 0 0 0; font-size:24px; line-height:36px}
 
 .rewards-3 {background:#edf4fa}
-.rewards-3 .production-about-main-descr {padding-bottom:91px}
+.rewards-3 .production-about-main-title {font-size:24px; line-height:36px; padding:0}
+.rewards-3 .production-about-main-descr {padding:0; margin:36px 0}
