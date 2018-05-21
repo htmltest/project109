@@ -597,7 +597,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .about-where .page-production-list-slider {margin:0}
 
 .about-cooperation {padding:89px 6% 50px 6%}
-.about-cooperation-border {border-top:1px solid #eee}
+.about-cooperation-border {border-top:1px solid #eee; min-height:100vh}
 
 .about-authors {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:50px -9999px 50px 0; padding:0 0 70px 0}
 .about-authors.slick-initialized {overflow:visible}
