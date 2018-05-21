@@ -406,10 +406,11 @@ a.main-opt-order:hover::before {opacity:1}
 .main-partners-list .slick-prev,
 .main-partners-list .slick-next {display:none !important}
 
-.main-produce {background:#000 url(../images/main-produce.jpg) no-repeat center; background-size:cover; padding:106px 8.6% 113px 8.6%; color:#fff; position:relative; overflow:hidden}
+.main-produce {background:#000 url(../images/main-produce.jpg) no-repeat center; background-size:cover; padding:106px 8.6% 43px 8.6%; color:#fff; position:relative; overflow:hidden}
 .main-produce-content {position:relative}
 .main-produce-title {text-transform:uppercase; font-size:40px; line-height:48px}
 .main-produce-text {font-size:30px; line-height:36px; padding:58px 0 0 0}
+.main-produce-text.bottom-text {font-size:18px; line-height:24px; padding:40px 0 0 0}
 .main-produce-info {margin:0 -15px; padding:61px 0 0 0}
 .main-produce-info::after {content:""; display:block; clear:both}
 .main-produce-info-item {float:left; width:25%; padding:0 15px; line-height:20px; color:#fff}
@@ -596,6 +597,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .about-where .page-production-list-slider {margin:0}
 
 .about-cooperation {padding:89px 6% 50px 6%}
+.about-cooperation-border {border-top:1px solid #eee}
 
 .about-authors {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:50px -9999px 50px 0; padding:0 0 70px 0}
 .about-authors.slick-initialized {overflow:visible}
@@ -669,7 +671,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .business-prefs .production-about-main-3 ul li::before {top:7px}
 
 .studio-target {border-top:1px solid #eee}
-.studio-target .production-about-main-descr {margin-bottom:91px}
+.studio-target .production-about-main-descr {color:#000; font-weight:300}
 
 .studio-bref {background:url(../images/studio-bref.jpg) no-repeat left center; background-size:cover; padding:91px 56px 240px 30%; color:#fff; min-height:100vh}
 .studio-bref .production-about-main-title {color:#fff}
