@@ -290,64 +290,39 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.product-photos-big a, .product-zoom').click(function(e) {
+    $('.product-zoom').click(function(e) {
         var curIndex = $('.product-photos-preview a').index($('.product-photos-preview a.active'));
-        $('.product-photos-max a').eq(curIndex).trigger('click');
+        $('.product-photos-big a').eq(curIndex).trigger('click');
         e.preventDefault();
     });
 
-    $('.product-photos-max a').fancybox({
-        prevEffect: 'none',
-        nextEffect: 'none',
-        margin: 0,
-        padding: 0,
-        maxWidth: 970,
-        minWidth: 480,
-        topRatio: 0,
-        aspectRatio: true,
-        tpl : {
-            closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
-            next     : '<a title="Следующая" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
-            prev     : '<a title="Предыдущая" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
+    $('.product-photos-big a, .product-sert').fancybox({
+        buttons : [
+            'close'
+        ],
+        lang : 'ru',
+        i18n : {
+            'ru' : {
+                CLOSE   : 'Закрыть',
+            }
         },
-        helpers: {
-			thumbs	: {
-				width	: 86,
-				height	: 58,
-                source  : function(current) {
-                    return $(current.element).data('thumbnail');
-                }
-			}
+        baseTpl:
+            '<div class="fancybox-container" role="dialog" tabindex="-1">' +
+                '<div class="fancybox-bg"></div>' +
+                '<div class="fancybox-toolbar">{{buttons}}</div>' +
+                '<div class="fancybox-inner">' +
+                    '<div class="fancybox-stage"></div>' +
+                "</div>" +
+            "</div>",
+        btnTpl: {
+            close:
+                '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px"><path fill-rule="evenodd"  fill="rgb(3, 151, 158)" d="M29.142,27.728 L27.728,29.142 L15.000,16.414 L2.272,29.142 L0.858,27.728 L13.586,15.000 L0.858,2.272 L2.272,0.858 L15.000,13.586 L27.728,0.858 L29.142,2.272 L16.414,15.000 L29.142,27.728 Z"/></svg></button>',
         },
-        closeEffect: 'none',
-        closeSpeed: 0
-    });
-
-    $('.product-sert').fancybox({
-        prevEffect: 'none',
-        nextEffect: 'none',
-        margin: 0,
-        padding: 0,
-        maxWidth: 970,
-        minWidth: 480,
-        topRatio: 0,
-        aspectRatio: true,
-        tpl : {
-            closeBtn : '<a title="Закрыть" class="fancybox-item fancybox-close" href="javascript:;"></a>',
-            next     : '<a title="Следующая" class="fancybox-nav fancybox-next" href="javascript:;"><span></span></a>',
-            prev     : '<a title="Предыдущая" class="fancybox-nav fancybox-prev" href="javascript:;"><span></span></a>'
-        },
-        helpers: {
-			thumbs	: {
-				width	: 86,
-				height	: 58,
-                source  : function(current) {
-                    return $(current.element).find('img').attr('src');
-                }
-			}
-        },
-        closeEffect: 'none',
-        closeSpeed: 0
+        thumbs: {
+            autoStart: true,
+            hideOnClose: true,
+            axis: 'y'
+        }
     });
 
     $('.product-params-header a').click(function(e) {
@@ -373,11 +348,20 @@ $(document).ready(function() {
     $('.product-others-tab-list-inner').slick({
         dots: true,
         infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 1599,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }
+        ]
     });
 
 });
@@ -522,6 +506,46 @@ $(window).on('load resize', function() {
         });
 
         curList.find('.author-catalogue-item-title').css({'min-height': curHeight + 'px'});
+    });
+
+    $('.catalogue').each(function() {
+        var curList = $(this);
+
+        curList.find('.catalogue-item a').css({'min-height': '0px'});
+
+        curList.find('.catalogue-item a').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.height();
+            var curTop = curBlock.offset().top;
+
+            curList.find('.catalogue-item a').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.offset().top == curTop) {
+                    var newHeight = otherBlock.height();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+    });
+
+    $('.product-others-tab-list').each(function() {
+        var curList = $(this);
+
+        curList.find('.catalogue-item a').css({'min-height': '0px'});
+
+        var curHeight = 0;
+
+        curList.find('.catalogue-item a').each(function() {
+            if ($(this).outerHeight() > curHeight) {
+                curHeight = $(this).outerHeight();
+            }
+        });
+
+        curList.find('.catalogue-item a').css({'min-height': curHeight + 'px'});
     });
 
 });
