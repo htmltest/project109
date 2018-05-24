@@ -847,6 +847,8 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .catalogue-item a:hover .catalogue-item-bg {opacity:1; visibility:visible}
 .catalogue-item-preview {text-align:center; width:100%; line-height:260px; height:260px; margin:30px 0 0 0; position:relative; overflow:hidden}
 .catalogue-item-preview img {vertical-align:middle; max-height:100%}
+.catalogue-item-preview-alt {position:absolute; left:0; top:0; right:0; bottom:0; opacity:0; transition:opacity 0.3s; background:#fff}
+.catalogue-item a:hover .catalogue-item-preview-alt {opacity:1}
 .catalogue-item-title {font-size:20px; line-height:26px; letter-spacing:0; white-space:normal; height:78px; position:relative; overflow:hidden}
 .catalogue-item-bottom {display:table; width:100%; margin:21px 0 0 0; position:relative}
 .catalogue-item-bottom p {margin:0; padding:0}
