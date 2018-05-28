@@ -420,9 +420,10 @@ a.main-opt-order:hover::before {opacity:1}
 .main-partners-next:hover {background-position:-36px -36px}
 .main-partners-list {font-size:0; line-height:0; letter-spacing:-1px; width:100%; white-space:nowrap; overflow:hidden; position:relative; margin:62px 0 0 0}
 .main-partners-item {display:inline-block; vertical-align:top}
-.main-partners-item a {display:block; width:179px; height:72px; border:1px solid #e6e6e6; text-align:center; line-height:70px; margin:0 15px; transition:border .2s}
+.main-partners-item a,
+.main-partners-item div {display:block; width:179px; height:72px; border:1px solid #e6e6e6; text-align:center; line-height:70px; margin:0 15px; transition:border .2s}
 .main-partners-item a:hover {border-color:#00959c}
-.main-partners-item.slick-slide a img {display:inline-block; vertical-align:middle}
+.main-partners-item.slick-slide img {display:inline-block; vertical-align:middle}
 .main-partners-list .slick-prev,
 .main-partners-list .slick-next {display:none !important}
 
