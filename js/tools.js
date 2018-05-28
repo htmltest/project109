@@ -34,7 +34,7 @@ $(document).ready(function() {
     });
 
     $('.slider-list').slick({
-        dots: false,
+        dots: true,
         infinite: true,
         arrows: false,
         slidesToShow: 1,
@@ -362,6 +362,40 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+
+    $('.filter-group-title a').click(function(e) {
+        var curGroup = $(this).parent().parent().parent();
+        curGroup.toggleClass('open');
+        curGroup.find('.filter-group-sub').slideToggle();
+
+        e.preventDefault();
+    });
+
+    $('.filter-group-title input').change(function() {
+        var curInput = $(this);
+        var curGroup = curInput.parents().filter('.filter-group');
+        if (curInput.prop('checked')) {
+            curGroup.addClass('checked');
+            curGroup.find('.filter-group-sub input').prop('checked', true);
+        } else {
+            curGroup.find('.filter-group-sub input').prop('checked', false);
+            curGroup.removeClass('checked');
+        }
+    });
+
+    $('.filter-group-sub input').change(function() {
+        var curInput = $(this);
+        var curGroup = curInput.parents().filter('.filter-group');
+        if (!curInput.prop('checked')) {
+            curGroup.find('.filter-group-title input').prop('checked', false);
+            curGroup.removeClass('checked');
+        } else {
+            if (curGroup.find('.filter-group-sub input:checked').length == curGroup.find('.filter-group-sub input').length) {
+                curGroup.find('.filter-group-title input').prop('checked', true);
+                curGroup.addClass('checked');
+            }
+        }
     });
 
 });
