@@ -398,6 +398,20 @@ $(document).ready(function() {
         }
     });
 
+    $('.catalogue-top-menu-item').click(function(e) {
+        var curLink = $(this);
+        if (!curLink.hasClass('active')) {
+            $('.catalogue-top-menu-item.active').removeClass('active');
+            curLink.addClass('active');
+            var curIndex = $('.catalogue-top-menu-item').index(curLink);
+            $('.catalogue-top-tab').stop(true, true);
+            $('.catalogue-top-tab:visible').fadeOut(200, function() {
+                $('.catalogue-top-tab').eq(curIndex).fadeIn(200);
+            });
+        }
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {

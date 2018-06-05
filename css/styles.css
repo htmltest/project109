@@ -318,7 +318,7 @@ form {margin:10px 0; padding:0}
 .slider {position:relative}
 .slider-list {position:relative; width:100%; white-space:nowrap; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px}
 .slider-item {display:inline-block; vertical-align:top; width:100%; white-space:normal}
-.slider-item-inner {height:576px; background:no-repeat center; background-size:cover; padding:0 56px}
+.slider-item-inner {height:576px; background:no-repeat center; background-size:cover; padding:0 56px; position:relative}
 .slider-item-title {font-size:60px; line-height:72px; letter-spacing:1.5px; text-transform:uppercase; padding:112px 0 0 0; color:#000}
 .slider-item-link {padding:56px 0 0 0}
 .slider-item-link a {position:relative; display:inline-block; overflow:hidden; vertical-align:top; border:2px solid #000; padding:0 124px 0 28px; font-size:16px; font-weight:500; line-height:68px; height:72px; color:#000; text-decoration:none; letter-spacing:0.8px; transition:all .2s}
@@ -327,6 +327,7 @@ form {margin:10px 0; padding:0}
 .slider-item-link a:hover::after {opacity:0}
 .slider-item-link a::before {content:""; display:block; width:24px; height:25px; background:url(../images/slider-icon-white.png); position:absolute; right:28px; top:23px; opacity:0; transition:all .2s}
 .slider-item-link a:hover::before {opacity:1}
+.slider-item-one-link {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 .slider-ctrl {position:absolute; left:56px; bottom:38px; z-index:2}
 .slider-ctrl a {display:block; float:left; width:36px; height:36px; background:url(../images/slider-arrows.png); position:relative; overflow:hidden; border-radius:50%}
 .slider-ctrl a::before {content:""; display:block; background:#00959c; height:155px; left:-75px; opacity:.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
@@ -341,11 +342,12 @@ form {margin:10px 0; padding:0}
 .slider-list .slick-dots li button:hover::before {background:#00959c}
 .slider-list .slick-dots li.slick-active button::before {background:#000}
 
-.slider-catalogue .slider-item-inner {height:506px}
-.slider-item-catalogue-title {font-size:34px; line-height:43px; letter-spacing:0.9px; text-transform:uppercase; padding:78px 0 0 0; color:#000; font-weight:500; max-width:636px}
-.slider-item-catalogue-subtitle {font-size:24px; line-height:36px; letter-spacing:0; padding:1px 0 0 0; color:#6a6393; font-weight:100; max-width:636px}
-.slider-item-catalogue-descr {font-size:16px; line-height:24px; letter-spacing:0; padding:46px 0 0 0; color:#000; max-width:636px}
-.slider-catalogue .slider-ctrl {bottom:80px}
+.slider-catalogue .slider-item-inner {height:300px}
+.slider-item-catalogue-title {font-size:34px; line-height:43px; letter-spacing:0.9px; text-transform:uppercase; padding:33px 0 0 0; color:#000; font-weight:500; max-width:736px}
+.slider-item-catalogue-subtitle {font-size:24px; line-height:36px; letter-spacing:0; padding:1px 0 0 0; color:#6a6393; font-weight:100; max-width:736px}
+.slider-item-catalogue-descr {font-size:16px; line-height:24px; letter-spacing:0; padding:16px 0 0 0; color:#000; max-width:736px}
+.slider-catalogue .slider-ctrl {bottom:24px}
+.slider-catalogue .slider-list .slick-dots {bottom:30px}
 
 @media screen and (min-width:1681px) {
     .slider-item-catalogue-descr {font-size:18px; line-height:28px}
@@ -745,17 +747,19 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .news-item-link a svg {vertical-align:middle; display:inline-block; margin:-2px 0 0 4px}
 .news-item-link a:hover svg path {fill:#4ad5db}
 
-.pager {margin:42px 0; font-size:24px; line-height:36px}
+.pager {margin:42px 0; font-size:15px; line-height:30px; text-align:center}
 .pager a,
-.pager span {display:inline-block; vertical-align:middle; margin:0 9px}
-.pager span {color:#00959c}
-.pager a.active {color:#676767; cursor:default}
+.pager span {display:inline-block; vertical-align:middle; margin:0 4px}
+.pager a {padding:0 10px; min-width:32px; border:1px solid #e6e6e6; color:#00959c}
+.pager a:hover {color:#00959c; border-color:#bdbdbd}
+.pager span {color:#00959c; border:1px solid #fff; padding:0 9px}
+.pager a.active {color:#fff; cursor:default; border-color:#00959c; background:#00959c}
 .pager a.pager-prev,
-.pager a.pager-next {width:36px; height:36px; background:url(../images/main-partners-arrows.png)}
-.pager a.pager-prev {margin:0 7px 0 0}
-.pager a.pager-prev:hover {background-position:left -36px}
-.pager a.pager-next {background:url(../images/main-partners-arrows.png) -36px top; margin:0 0 0 7px}
-.pager a.pager-next:hover {background-position:-36px -36px}
+.pager a.pager-next {width:32px; height:32px; background:url(../images/main-partners-arrows.png); border:none; padding:0}
+.pager a.pager-prev {margin:0 -4px 0 0; background-position:-2px -2px}
+.pager a.pager-prev:hover {background-position:-2px -38px}
+.pager a.pager-next {background:url(../images/main-partners-arrows.png) -38px -2px; margin:0 0 0 -4px}
+.pager a.pager-next:hover {background-position:-38px -38px}
 
 .back-link {font-size:14px; font-weight:bold}
 .back-link a svg {vertical-align:middle; display:inline-block; margin:-2px 4px 0 0}
@@ -880,7 +884,18 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
     .catalogue-item {width:25%}
 }
 
-.page-menu .bx_filter {border-top:1px solid #f5f5f5; padding:25px 30px 0 30px; margin:32px 0 0 -30px}
+.catalogue-search {border-top:1px solid #f5f5f5; padding:40px 30px 0 30px; margin:32px 0 0 -30px}
+.catalogue-search form {margin:0; padding:0 30px 0 0; border:1px solid #a6a6a6; position:relative; border-radius:3px}
+.catalogue-search-input {position:relative}
+.catalogue-search-input input {border:none; font:300 14px/34px MuseoSansCyrl, sans-serif; color:#4c4c4c; vertical-align:top; margin:0; padding:0 0 0 15px; width:100%; height:34px; box-sizing:border-box; outline:none; border-radius:0; background:transparent; -webkit-appearance:none}
+.catalogue-search-input input::-webkit-input-placeholder {opacity:1; color:#808080}
+.catalogue-search-input input::-moz-placeholder {opacity:1; color:#808080}
+.catalogue-search-input input:-ms-input-placeholder {opacity:1; color:#808080}
+.catalogue-search-input label.error {display:none !important}
+.catalogue-search-submit {position:absolute; right:0; top:0}
+.catalogue-search-submit input {display:block; vertical-align:top; border-radius:0; background:url(../images/catalogue-search.png) no-repeat center; margin:0; padding:0; outline:none; overflow:visible; border:none; text-decoration:none; width:34px; height:34px; box-sizing:border-box; -webkit-appearance:none; cursor:pointer}
+
+.page-menu .bx_filter {padding:25px 30px 0 30px; margin:15px 0 0 -30px}
 .page-menu .bx_filter_title {display:none}
 .page-menu .bx_filter_parameters_box {margin:0 0 33px 0; position:relative}
 .page-menu .bx_filter_parameters_box_title {font-size:13px; line-height:20px; color:#03979e; text-transform:uppercase}
@@ -1048,3 +1063,22 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .product-others-tab-list-inner .slick-dots li:before {display:none}
 .product-others-tab-list-inner .slick-dots li button {display:block; width:9px; height:9px; border:none; border-radius:50%; background:#c8c8c8; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
 .product-others-tab-list-inner .slick-dots li.slick-active button {background:#9d9d9d}
+
+.catalogue-top {background:#f3f3f3; padding:30px 56px 0 56px}
+.catalogue-top h1 {margin:0; padding:0}
+.catalogue-top-menu {margin:0 0 0 -34px}
+.catalogue-top-menu::after {content:""; display:block; clear:both}
+.catalogue-top-menu-item {float:left; width:calc(16.66% - 34px); margin:60px 0 0 34px; text-decoration:none; color:#000}
+.catalogue-top-menu-item-img {position:relative; width:116px; height:116px; border-radius:50%; line-height:0; transition:all 0.2s}
+.catalogue-top-menu-item:hover .catalogue-top-menu-item-img {transform:scale(1.05); box-shadow:0 0 13px rgba(0, 0, 0, 0.5)}
+.catalogue-top-menu-item.active .catalogue-top-menu-item-img {box-shadow:0 0 13px rgba(0, 0, 0, 0.5)}
+.catalogue-top-menu-item-img img {position:absolute; display:block; right:0; bottom:0; max-width:none}
+.catalogue-top-menu-item-title {width:116px; text-align:center; text-transform:uppercase; font-size:13px; line-height:18px; font-weight:300; padding:13px 0 0 0; transition:all 0.2s}
+.catalogue-top-menu-item:hover .catalogue-top-menu-item-title {color:#38abb0}
+.catalogue-top-menu-item.active .catalogue-top-menu-item-title {color:#38abb0; font-weight:bold}
+.catalogue-top-tabs {padding:40px 0 30px 0}
+.catalogue-top-tab {display:none}
+.catalogue-top-tab.active {display:block}
+.catalogue-top-tab-link {font-size:0.9em; margin:30px 0 0 0; position:relative}
+.catalogue-top-tab-link a {display:block; width:326px; height:48px; margin:0 auto; font-weight:300; line-height:48px; color:#fff; background:#00959c; transition:all 0.2s; text-align:center}
+.catalogue-top-tab-link a:hover {background:#4ad5db}
