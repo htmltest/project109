@@ -104,10 +104,10 @@ $(document).ready(function() {
             curPager += '</ul>';
             curSlider.find('.page-production-list-slider-menu').html(curPager);
             curSlider.find('.page-production-list-slider-menu li').eq(0).addClass('active');
-            curSlider.find('.page-production-list-item').eq(0).addClass('active');
         } else {
             curSlider.find('.page-production-list-slider-menu').remove();
         }
+        curSlider.find('.page-production-list-item').eq(0).addClass('active');
     });
 
     $(window).on('load resize', function() {
