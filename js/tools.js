@@ -413,9 +413,13 @@ $(document).ready(function() {
             curLink.addClass('active');
             var curIndex = $('.catalogue-top-menu-item').index(curLink);
             $('.catalogue-top-tab').stop(true, true);
-            $('.catalogue-top-tab:visible').fadeOut(200, function() {
+            if ($('.catalogue-top-tab:visible').length > 0) {
+                $('.catalogue-top-tab:visible').fadeOut(200, function() {
+                    $('.catalogue-top-tab').eq(curIndex).fadeIn(200);
+                });
+            } else {
                 $('.catalogue-top-tab').eq(curIndex).fadeIn(200);
-            });
+            }
         }
         e.preventDefault();
     });
