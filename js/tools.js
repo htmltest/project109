@@ -374,8 +374,12 @@ $(document).ready(function() {
 
     $('.filter-group-title a').click(function(e) {
         var curGroup = $(this).parent().parent().parent();
-        curGroup.toggleClass('open');
-        curGroup.find('.filter-group-sub').slideToggle();
+        if (!curGroup.hasClass('filter-group-one')) {
+            curGroup.toggleClass('open');
+            curGroup.find('.filter-group-sub').slideToggle();
+        } else {
+            curGroup.find('.filter-group-title label').trigger('click');
+        }
 
         e.preventDefault();
     });
@@ -423,6 +427,8 @@ $(document).ready(function() {
         }
         e.preventDefault();
     });
+
+    $('.page-menu-scroll').jScrollPane({autoReinitialise: true});
 
 });
 
