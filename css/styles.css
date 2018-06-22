@@ -1505,9 +1505,10 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
     .product-photos {display:none}
 }
 
-.product-photos-mobile {display:none}
+.product-photos-mobile-wrap {display:none}
 
 @media screen and (max-width:1259px) {
+    .product-photos-mobile-wrap {display:block}
     .product-photos-mobile {display:block; white-space:nowrap; position:relative; overflow:hidden; width:100%; font-size:0; line-height:0; letter-spacing:-1px; margin:40px 0}
     .product-photos-mobile-item {display:inline-block; vertical-align:middle; width:100%; text-align:center; padding:0 40px}
     .product-photos-mobile-item img {max-width:100%}
