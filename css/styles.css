@@ -256,10 +256,10 @@ form {margin:10px 0; padding:0}
 .side-open .side-menu-link-icon::before {top:7px; transform:rotate(45deg)}
 .side-menu-link-icon::after {content:""; display:block; position:absolute; left:0; bottom:0; right:0; height:2px; background:#111; transition:all .3s}
 .side-open .side-menu-link-icon::after {bottom:7px; transform:rotate(-45deg)}
-.side-menu-link-text {transform:rotate(90deg)}
+.side-menu-link-text {transform:rotate(-90deg)}
 .side-menu-link-text-open {display:none}
 .side-open .side-menu-link-text-default {display:none}
-.side-open .side-menu-link-text-open {display:block}
+.side-open .side-menu-link-text-open {display:block; left:-46px; position:relative}
 
 @media screen and (max-width:1259px) {
     .side {display:none}
@@ -309,6 +309,8 @@ form {margin:10px 0; padding:0}
     .side-contacts-other a:hover {text-decoration:underline}
 }
 
+.side-menu-sub-parent {display:none}
+
 @media screen and (max-width:1259px) {
     .mobile-menu-open .side-content,
     .mobile-menu-open.side-open .side-content {left:0; border-left:none; background:#fff; width:100vw; min-width:480px}
@@ -323,7 +325,7 @@ form {margin:10px 0; padding:0}
     .side-menu-sub-open .side-menu-sub {display:block}
     .side-menu-sub ul li {margin:0; padding:0; border-top:1px solid #e0e0e0}
     .side-menu-sub ul li a {display:block; padding:0 25px; position:relative; width:auto}
-    .side-menu-sub-parent {position:relative; padding:0 25px 0 52px; text-transform:uppercase; font-weight:bold; color:#00959c; cursor:pointer}
+    .side-menu-sub-parent {display:block; position:relative; padding:0 25px 0 52px; text-transform:uppercase; font-weight:bold; color:#00959c; cursor:pointer}
     .side-menu-sub-parent::before {content:""; position:absolute; display:block; width:10px; height:17px; background:url(../images/side-menu-main-mobile.png); left:25px; top:50%; margin-top:-9px; transform:rotate(-180deg)}
     .side-contacts {margin:0; padding:0 25px 23px 25px}
     .side-contacts-country {font-size:16px; padding:28px 0 0 0}
@@ -1559,6 +1561,24 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 
 @media screen and (max-width:1259px) {
     .filter-group-sub-item label span {font-size:15px; color:#000}
+}
+
+.filter-full {display:none}
+.filter-full .filter-group:first-child {margin-top:0}
+.filter-full .bx_filter_param_label:first-child {margin-top:0}
+.filter-full-link {font-size:12px}
+.filter-full-link a {text-decoration:none; color:#03979e; border-bottom:1px dashed #03979e}
+.filter-full-link a:hover {border-bottom:none}
+.filter-full-link-text-2 {display:none}
+.filter-full-link.open .filter-full-link-text-1 {display:none}
+.filter-full-link.open .filter-full-link-text-2 {display:inline}
+
+@media screen and (min-width:1600px) {
+    .filter-full-link {font-size:15px}
+}
+
+@media screen and (max-width:1259px) {
+    .filter-full-link {font-size:15px}
 }
 
 .product::after {content:""; display:block; clear:both}

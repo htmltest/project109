@@ -539,6 +539,14 @@ $(document).ready(function() {
         $(this).parents().filter('.about-cooperation').toggleClass('open');
     });
 
+    $('.filter-full-link').click(function(e) {
+        var curLink = $(this);
+        var curBlock = $(this).parent();
+        curBlock.find('.filter-full').stop(true, true).slideToggle(200);
+        curLink.toggleClass('open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('load resize', function() {
