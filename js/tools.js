@@ -550,7 +550,7 @@ $(document).ready(function() {
         $(this).parents().filter('.about-cooperation').toggleClass('open');
     });
 
-    $('.filter-full-link').click(function(e) {
+    $('body').on('click', '.filter-full-link', function(e) {
         var curLink = $(this);
         var curBlock = $(this).parent();
         curBlock.find('.filter-full').stop(true, true).slideToggle(200);
@@ -558,7 +558,23 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    reloadFilter();
+
 });
+
+function reloadFilter() {
+    $('.bx_filter_parameters_box_container').each(function() {
+        var curBlock = $(this);
+        if (curBlock.find('.filter-group').length > 5) {
+            curBlock.find('.filter-group:gt(4)').wrapAll('<div class="filter-full" />');
+            curBlock.find('.filter-full').after('<div class="filter-full-link"><a href="#"><span class="filter-full-link-text-1">Все</span><span class="filter-full-link-text-2">Свернуть</span></a></div>');
+        }
+        if (curBlock.find('.bx_filter_param_label').length > 5) {
+            curBlock.find('.bx_filter_param_label:gt(4)').wrapAll('<div class="filter-full" />');
+            curBlock.find('.filter-full').after('<div class="filter-full-link"><a href="#"><span class="filter-full-link-text-1">Все</span><span class="filter-full-link-text-2">Свернуть</span></a></div>');
+        }
+    });
+}
 
 $(window).on('load resize', function() {
     $('.product-text-wrap').each(function() {
