@@ -592,6 +592,7 @@ $(window).on('load resize', function() {
                     infinite: false,
                     arrows: false,
                     dots: false,
+                    centerMode: true,
                     variableWidth: true
                 });
             }
@@ -639,6 +640,12 @@ $(window).on('load resize scroll', function() {
         if ($('.catalogue-ctrl').length > 0) {
             $('.page-menu').css({'top': $('.catalogue-ctrl').offset().top});
         }
+    }
+
+    if ($(window).scrollTop() > $(window).height()) {
+        $('.catalogue-up-link').addClass('visible');
+    } else {
+        $('.catalogue-up-link').removeClass('visible');
     }
 });
 

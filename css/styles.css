@@ -1453,11 +1453,11 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
     .catalogue-item {width:50%; padding:22px 0}
     .catalogue-item a {border:none; padding:0 22px}
     .catalogue-item a:nth-child(odd) {border-right:1px solid #f0f0f0}
-    .catalogue-item-preview {height:200px; line-height:200px}
-    .catalogue-item-title {font-size:18px}
-    .catalogue-item-bottom {display:block}
-    .catalogue-item-bottom-type {display:block; padding:0; font-size:16px; line-height:24px}
-    .catalogue-item-bottom-size {display:block; text-align:left; font-size:16px; line-height:24px}
+    .catalogue-item-preview {height:200px; line-height:200px; margin:0}
+    .catalogue-item-title {font-size:18px; white-space:nowrap; position:relative; overflow:hidden; text-overflow:ellipsis}
+    .catalogue-item-bottom {display:block; overflow:hidden}
+    .catalogue-item-bottom-type {display:block; padding:0; font-size:16px; line-height:24px; margin:0 0 -6px 0}
+    .catalogue-item-bottom-size {display:block; text-align:left; font-size:16px; line-height:24px; padding:0; margin:6px 0 -6px 0}
     .catalogue-item-bottom-size p {display:inline}
     .catalogue-item-bottom-size p::after {content:","}
     .catalogue-item-bottom-size p:last-child::after {content:""}
@@ -1466,7 +1466,8 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .catalogue-up-link {display:none}
 
 @media screen and (max-width:1259px) {
-    .catalogue-up-link {display:block; margin:-22px 0 -28px 0}
+    .catalogue-up-link {position:fixed; right:10px; bottom:10px; z-index:20}
+    .catalogue-up-link.visible {display:block}
     .catalogue-up-link::after {content:""; display:block; clear:both}
     .catalogue-up-link a {float:right; width:35px; height:35px; background:url(../images/catalogue-up-link.png)}
 }
@@ -1743,10 +1744,11 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 
 @media screen and (max-width:1259px) {
     .product-params-content {margin-left:-25px; padding-left:25px; margin-right:-25px; padding-right:25px}
+    .wrapper .product-params-content table {width:100%}
     .wrapper .product-params-content th {font-size:16px; color:#868686; padding:0 0 9px 0; text-transform:uppercase}
     .wrapper .product-params-content td {padding-right:15px; padding-left:0; border-width:2px; border-color:#dae0e2; color:#777; padding:12px 0 9px 0}
     .wrapper .product-params-content thead+tbody tr:first-child td {border-top:3px solid #00959c}
-    .wrapper .product-params-content td:first-child {padding-left:0}
+    .wrapper .product-params-content td:first-child {padding-left:0; width:140px}
     .product-sert {width:120px; margin:0 8px 8px 0}
 }
 
