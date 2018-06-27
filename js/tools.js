@@ -281,23 +281,6 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="slick-next"></button>'
     });
 
-    $('.author-catalogue-list-inner').slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3
-    });
-
-    $('.author-catalogue-prev').click(function(e) {
-        $('.author-catalogue-list .slick-prev').trigger('click');
-        e.preventDefault();
-    });
-
-    $('.author-catalogue-next').click(function(e) {
-        $('.author-catalogue-list .slick-next').trigger('click');
-        e.preventDefault();
-    });
-
     $('.page-menu-category a').click(function(e) {
         $(this).toggleClass('closed');
         $('.page-menu-category-menu').slideToggle();
@@ -731,22 +714,6 @@ $(window).on('load resize', function() {
             });
         });
 
-    });
-
-    $('.author-catalogue-list').each(function() {
-        var curList = $(this);
-
-        curList.find('.author-catalogue-item-title').css({'min-height': '0px'});
-
-        var curHeight = 0;
-
-        curList.find('.author-catalogue-item-title').each(function() {
-            if ($(this).outerHeight() > curHeight) {
-                curHeight = $(this).outerHeight();
-            }
-        });
-
-        curList.find('.author-catalogue-item-title').css({'min-height': curHeight + 'px'});
     });
 
     $('.catalogue').each(function() {
