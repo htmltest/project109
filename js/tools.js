@@ -525,12 +525,15 @@ $(document).ready(function() {
         arrows: false
     });
 
-    $('.production-about-main-title').click(function() {
+    $('.production-about-main-title').click(function(e) {
         $(this).parents().filter('.page-slider-item').toggleClass('open');
         $(this).parents().filter('.page-production-list').toggleClass('open');
         $(this).parents().filter('.production-about-main').toggleClass('open');
         $(this).parents().filter('.studio-bref').toggleClass('open');
         $(this).parents().filter('.about-cooperation').toggleClass('open');
+        if ($(window).width() < 1260) {
+            e.preventDefault();
+        }
     });
 
     $('body').on('click', '.filter-full-link', function(e) {
