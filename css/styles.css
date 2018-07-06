@@ -560,19 +560,27 @@ form {margin:10px 0; padding:0}
 @media screen and (min-width:1260px) {
     .main-catalogue a:hover {text-decoration:underline}
 }
-.main-catalogue-group-1 {float:left; width:50%; height:456px; padding:70px 0 0 40px; background:url(../images/main-catalogue-group-1.jpg) no-repeat center; background-size:cover}
-.main-catalogue-group-2 {float:left; clear:left; width:25%; height:672px; padding:46px 50px 0 50px; background:url(../images/main-catalogue-group-2.jpg) no-repeat center bottom; background-size:cover}
-.main-catalogue-group-3 {float:left; width:25%; height:672px; padding:46px 50px 0 50px; background:url(../images/main-catalogue-group-3.jpg) no-repeat center bottom; background-size:cover}
-.main-catalogue-group-4 {float:right; width:50%; height:868px; padding:117px 0 0 0; background:url(../images/main-catalogue-group-4.jpg) no-repeat center bottom; background-size:cover}
-.main-catalogue-group-5 {float:right; clear:right; width:50%; height:260px; padding:42px 0 0 50px; background:url(../images/main-catalogue-group-5.jpg) no-repeat center; background-size:cover}
-.main-catalogue-group-title {text-transform:uppercase; font-weight:500; font-size:24px; line-height:36px; max-width:200px; letter-spacing:1.2px}
+.main-catalogue-group {position:relative}
+.main-catalogue-group-bg {position:absolute; left:0; top:0; right:0; bottom:0}
+.main-catalogue-group-bg-mobile {display:none; position:absolute; left:0; top:0; right:0; bottom:0}
+.main-catalogue-group-1 {float:left; width:50%; height:456px; padding:70px 0 0 40px}
+.main-catalogue-group-1 .main-catalogue-group-bg {background:no-repeat center; background-size:cover}
+.main-catalogue-group-2 {float:left; clear:left; width:25%; height:672px; padding:46px 50px 0 50px}
+.main-catalogue-group-2 .main-catalogue-group-bg {background:no-repeat center bottom; background-size:cover}
+.main-catalogue-group-3 {float:left; width:25%; height:672px; padding:46px 50px 0 50px}
+.main-catalogue-group-3 .main-catalogue-group-bg {background:no-repeat center bottom; background-size:cover}
+.main-catalogue-group-4 {float:right; width:50%; height:868px; padding:117px 0 0 0}
+.main-catalogue-group-4 .main-catalogue-group-bg {background:no-repeat center bottom; background-size:cover}
+.main-catalogue-group-5 {float:right; clear:right; width:50%; height:260px; padding:42px 0 0 50px}
+.main-catalogue-group-5 .main-catalogue-group-bg {background:no-repeat center; background-size:cover}
+.main-catalogue-group-title {text-transform:uppercase; font-weight:500; font-size:24px; line-height:36px; max-width:200px; letter-spacing:1.2px; position:relative}
 .main-catalogue-group-4 .main-catalogue-group-title {padding-left:45%}
 .main-catalogue-group-1 .main-catalogue-group-title a {color:#fff}
 .main-catalogue-group-2 .main-catalogue-group-title a {color:#111}
 .main-catalogue-group-3 .main-catalogue-group-title a {color:#111}
 .main-catalogue-group-4 .main-catalogue-group-title a {color:#111}
 .main-catalogue-group-5 .main-catalogue-group-title a {color:#111}
-.main-catalogue-group-menu {font-size:18px; line-height:24px; padding:9px 0 0 0}
+.main-catalogue-group-menu {font-size:18px; line-height:24px; padding:9px 0 0 0; position:relative}
 .main-catalogue-group-3 .main-catalogue-group-menu {padding-right:45%}
 .main-catalogue-group-4 .main-catalogue-group-menu {padding-left:45%}
 .main-catalogue-group-menu ul {margin:0; padding:0; list-style:none}
@@ -583,7 +591,7 @@ form {margin:10px 0; padding:0}
 .main-catalogue-group-3 .main-catalogue-group-menu a {color:#4c4c4c}
 .main-catalogue-group-4 .main-catalogue-group-menu a {color:#4c4c4c}
 .main-catalogue-group-5 .main-catalogue-group-menu a {color:#4c4c4c}
-.main-catalogue-group-more {font-weight:bold; font-size:15px; line-height:24px; margin:24px 0 0 0}
+.main-catalogue-group-more {font-weight:bold; font-size:15px; line-height:24px; margin:24px 0 0 0; position:relative}
 .main-catalogue-group-4 .main-catalogue-group-more {padding-left:45%}
 .main-catalogue-group-1 .main-catalogue-group-more a {color:#fff}
 .main-catalogue-group-2 .main-catalogue-group-more a {color:#111}
@@ -598,14 +606,21 @@ form {margin:10px 0; padding:0}
 .main-catalogue-group-5 .main-catalogue-group-more a::after {background:url(../images/main-catalogue-group-more-black.png)}
 
 @media screen and (max-width:1259px) {
-    .main-catalogue-group-1 {float:none; width:100%; height:auto; background-size:150% auto; background-position:center top; padding:0 25px}
-    .main-catalogue-group-2 {float:none; clear:none; width:100%; height:auto; background:#f6f6f6 url(../images/main-catalogue-group-2-mobile.jpg) no-repeat center top; background-size:100% auto; padding:0 25px}
-    .main-catalogue-group-2.open {background-position:center bottom}
-    .main-catalogue-group-3 {float:none; width:100%; height:auto; background:#f2f2f2 url(../images/main-catalogue-group-3-mobile.jpg) no-repeat center top; background-size:100% auto; padding:0 25px}
-    .main-catalogue-group-3.open {background-position:center bottom}
-    .main-catalogue-group-4 {float:none; width:100%; height:auto; background:#f1eafb url(../images/main-catalogue-group-4-mobile.jpg) no-repeat center top; background-size:100% auto; padding:0 25px}
-    .main-catalogue-group-5 {float:none; clear:none; width:100%; height:auto; background:#f2f2f2 url(../images/main-catalogue-group-5-mobile.jpg) no-repeat center top; background-size:100% auto; padding:0 25px}
-    .main-catalogue-group-5.open {background-position:center bottom}
+    .main-catalogue-group-bg {display:none}
+    .main-catalogue-group-bg-mobile {display:block}
+    .main-catalogue-group-1 {float:none; width:100%; height:auto; padding:0 25px}
+    .main-catalogue-group-1 .main-catalogue-group-bg-mobile {background:no-repeat center top; background-size:150% auto}
+    .main-catalogue-group-2 {float:none; clear:none; width:100%; height:auto; padding:0 25px}
+    .main-catalogue-group-2 .main-catalogue-group-bg-mobile {background:#f6f6f6 no-repeat center top; background-size:100% auto}
+    .main-catalogue-group-2.open .main-catalogue-group-bg-mobile {background-position:center bottom}
+    .main-catalogue-group-3 {float:none; width:100%; height:auto; padding:0 25px}
+    .main-catalogue-group-3 .main-catalogue-group-bg-mobile {background:#f2f2f2 no-repeat center top; background-size:100% auto}
+    .main-catalogue-group-3.open .main-catalogue-group-bg-mobile {background-position:center bottom}
+    .main-catalogue-group-4 {float:none; width:100%; height:auto; padding:0 25px}
+    .main-catalogue-group-4 .main-catalogue-group-bg-mobile {background:#f1eafb no-repeat center top; background-size:100% auto}
+    .main-catalogue-group-5 {float:none; clear:none; width:100%; height:auto; padding:0 25px}
+    .main-catalogue-group-5 .main-catalogue-group-bg-mobile {background:#f2f2f2 no-repeat center top; background-size:100% auto}
+    .main-catalogue-group-5.open .main-catalogue-group-bg-mobile {background-position:center bottom}
     .main-catalogue-group-title {font-size:26px; line-height:40px; max-width:none; position:relative}
     .main-catalogue-group-title a {display:block; padding:31px 25px 28px 25px; margin:0 -25px; cursor:pointer}
     .main-catalogue-group-title a::after {content:""; display:block; vertical-align:middle; width:17px; height:11px; position:absolute; right:0; top:40px; background:url(../images/main-arrow2-mobile.png); transform:rotate(-180deg); transition:all 0.2s}
