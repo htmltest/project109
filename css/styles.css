@@ -1100,7 +1100,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
     .studio-task .btn {margin:0 -25px 0 -25px; width:auto; display:block}
 }
 
-.about-authors {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:50px -9999px 50px 0; padding:0 0 70px 0}
+.about-authors {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:50px -10% 50px 0; padding:0 0 70px 0}
 .about-authors.slick-initialized {overflow:visible}
 .about-authors-item {display:inline-block; vertical-align:top; width:220px}
 .about-authors-item a {display:block; width:180px; text-decoration:none}
@@ -1113,7 +1113,7 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .about-authors .slick-next {left:46px; background-position:-36px top}
 .about-authors .slick-next:hover {background-position:-36px -36px}
 
-.about-partners {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:26px -9999px 50px 0; padding:0 0 70px 0}
+.about-partners {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden; margin:26px -10% 50px 0; padding:0 0 70px 0}
 .about-partners.slick-initialized {overflow:visible}
 .about-partner-item {display:inline-block; vertical-align:top; width:270px}
 .about-partner-item a {display:block; width:240px; text-decoration:none; border:1px solid #e6e6e6; text-align:center; line-height:68px; height:70px; position:relative; overflow:hidden; transition:border .2s}
@@ -1340,6 +1340,10 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 .author-detail {min-height:100vh; padding:30px 56px 130px 40%; background:no-repeat center; background-size:cover}
 .author-detail .page-production-list-slider {margin-top:0; color:#000}
 .author-slider .page-slider-links {left:40%; margin-left:-30px}
+
+@media screen and (max-width:1259px) {
+    .author-detail {background:none !important; min-height:0; padding-left:56px}
+}
 
 .author-catalogue {border-top:1px solid #edf5f8; padding:54px 0 0 0}
 .author-catalogue .product-others-tab-list {margin-bottom:-100px}

@@ -267,7 +267,15 @@ $(document).ready(function() {
         variableWidth: true,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToScroll: 2
+                }
+            }
+        ]
     });
 
     $('.about-partners').slick({
@@ -278,7 +286,22 @@ $(document).ready(function() {
         variableWidth: true,
         adaptiveHeight: true,
         prevArrow: '<button type="button" class="slick-prev"></button>',
-        nextArrow: '<button type="button" class="slick-next"></button>'
+        nextArrow: '<button type="button" class="slick-next"></button>',
+        responsive: [
+            {
+                breakpoint: 1259,
+                settings: {
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    centerMode: true,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('.page-menu-category a').click(function(e) {
