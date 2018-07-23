@@ -1750,10 +1750,10 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
 }
 
 .product-params-content {background:#f5f5f5; padding:20px 100px; border-bottom:1px solid #f0f0f0}
-.wrapper .product-params-content table {border-bottom:none; margin:0}
+.wrapper .product-params-content table {width:auto; border-bottom:1px solid #dcdcdc; margin:0}
 .wrapper .product-params-content th {color:#000; font-size:1em; text-transform:none; text-align:left; padding:11px 30px 11px 20px; font-weight:bold}
 .wrapper .product-params-content td {border-width:1px; border-color:#dcdcdc; padding:11px 30px 11px 20px; color:#000}
-.wrapper .product-params-content table+table {border-top:1px solid #dcdcdc}
+.wrapper .product-params-content table:last-child {border-bottom:none}
 .wrapper .product-params-content tr::before,
 .wrapper .product-params-content tr::after {display:none}
 @media screen and (min-width:1260px) {
