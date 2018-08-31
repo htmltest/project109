@@ -381,6 +381,10 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    if ($('.product-others-menu ul li').length == 1) {
+        $('.product-others-menu').addClass('one');
+    }
+
     $('.product-others-menu ul li a').click(function(e) {
         var curLi = $(this).parent();
         if (!curLi.hasClass('active')) {
@@ -568,6 +572,12 @@ $(document).ready(function() {
     });
 
     reloadFilter();
+
+    $('.sitemap-title a').click(function(e) {
+        $('.sitemap-title').toggleClass('open');
+        $('.sitemap').slideToggle();
+        e.preventDefault();
+    });
 
 });
 
