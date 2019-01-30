@@ -579,7 +579,89 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.shops-filter-values-link span').click(function() {
+        $('.shops-filter-values-link').toggleClass('open');
+        $('.shops-filter-cities').stop(true, true).slideToggle();
+    });
+
+    $('.shops-filter-cities-list ul li span').click(function() {
+        $(this).toggleClass('active');
+        var selectedCities = [];
+        $('.shops-filter-cities-list ul li span.active').each(function() {
+            selectedCities.push($(this).html());
+        });
+        $('.shops-filter-values-item').remove();
+        for (var i = 0; i < selectedCities.length; i++) {
+            $('.shops-filter-values-inner').append('<div class="shops-filter-values-item">' + selectedCities[i] + '</div>');
+        }
+        if (selectedCities.length > 0) {
+            $('.shop').each(function() {
+                var curShop = $(this);
+                var curResult = false;
+                for (var i = 0; i < selectedCities.length; i++) {
+                    if (curShop.find('.shop-detail-cities-list li:contains("' + selectedCities[i] + '")').length > 0) {
+                        curResult = true;
+                    }
+                }
+                if (curResult) {
+                    curShop.removeClass('hidden');
+                } else {
+                    curShop.addClass('hidden');
+                }
+            });
+        } else {
+            $('.shop.hidden').removeClass('hidden');
+        }
+    });
+
+    $('.shop-logo').click(function() {
+        var curPadding = $('.wrapper').width();
+        $('html').addClass('shop-detail-open');
+        curPadding = $('.wrapper').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+        $(this).parent().find('.shop-detail').addClass('open');
+        shopDetailPosition();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            shopDetailClose();
+        }
+    });
+
+    $('body').on('click', '.shop-detail-close', function(e) {
+        shopDetailClose();
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).hasClass('shop-detail')) {
+            shopDetailClose();
+        }
+    });
+
+    $(window).resize(function() {
+        shopDetailPosition();
+    });
+
 });
+
+function shopDetailPosition() {
+    $('.shop-detail.open').each(function() {
+        $(this).find('.shop-detail-inner').css({'top': '50%', 'margin-top': -$(this).find('.shop-detail-inner').height() / 2, 'padding-bottom': 0});
+        if ($(this).find('.shop-detail-inner').height() > $(this).height() - 60) {
+            $(this).find('.shop-detail-inner').css({'top': '30px', 'margin-top': 0, 'padding-bottom': 30});
+        }
+    })
+}
+
+function shopDetailClose() {
+    $('.shop-detail.open').each(function() {
+        $('html').removeClass('shop-detail-open');
+        $(this).removeClass('open');
+        $('body').css({'margin-right': 0});
+    });
+}
 
 function reloadFilter() {
     $('.bx_filter_parameters_box_container').each(function() {

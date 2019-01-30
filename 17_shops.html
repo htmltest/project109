@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>BROCARD GROUP</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/revealator/fm.revealator.jquery.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/revealator/fm.revealator.jquery.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.parallax-scroll.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <div class="header-mobile">
+                <div class="header-mobile-logo"><a href="#"></a></div>
+                <a href="#" class="header-mobile-menu-link"></a>
+            </div>
+
+            <!-- side -->
+            <div class="side">
+                <a href="#" class="side-menu-link">
+                    <div class="side-menu-link-icon"></div>
+                    <div class="side-menu-link-text">
+                        <div class="side-menu-link-text-default">меню</div>
+                        <div class="side-menu-link-text-open">свернуть</div>
+                    </div>
+                </a>
+
+                <div class="side-content">
+                    <div class="side-menu">
+                        <div class="side-menu-main">
+                            <ul>
+                                <li>
+                                    <a href="#">Компания</a>
+                                    <ul>
+                                        <li><a href="#">О нас</a></li>
+                                        <li><a href="#">История</a></li>
+                                        <li><a href="#">Награды</a></li>
+                                        <li><a href="#">Новости и события</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Бизнес</a>
+                                    <ul>
+                                        <li><a href="#">Анкета партнера</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Производство</a>
+                                    <ul>
+                                        <li><a href="#">О контрактном производстве</a></li>
+                                        <li><a href="#">Партнеры</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Студия</a>
+                                    <ul>
+                                        <li><a href="#">О студии</a></li>
+                                        <li><a href="#">Портфолио</a></li>
+                                        <li><a href="#">Авторы ароматов</a></li>
+                                        <li><a href="#">Партнеры</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Каталог</a></li>
+                                <li><a href="#">Блог</a></li>
+                            </ul>
+                        </div>
+                        <div class="side-menu-sub"></div>
+                    </div>
+                    <div class="side-contacts">
+                        <div class="side-contacts-country">Россия</div>
+                        <div class="side-contacts-address">127018, Москва,<br /> ул. Полковая дом 3 стр. 4</div>
+                        <div class="side-contacts-info">
+                            <div class="side-contacts-info-row">
+                                <div class="side-contacts-info-name">Телефон</div>
+                                <div class="side-contacts-info-value"><a href="tel:+74952801250">+7 (495) 280 12 50</a></div>
+                            </div>
+                            <div class="side-contacts-info-row">
+                                <div class="side-contacts-info-name">Email</div>
+                                <div class="side-contacts-info-value"><a href="mailto:office@brocard.ru">office@brocard.ru</a></div>
+                            </div>
+                        </div>
+                        <div class="side-contacts-other"><a href="#">Контакты производства и офисов в других странах</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- side END -->
+
+            <!-- page menu -->
+            <div class="page-menu">
+                <div class="page-menu-logo"><a href="#"></a></div>
+                <div class="page-menu-category">Brocard</div>
+                <div class="page-menu-category-menu">
+                    <ul>
+                        <li><a href="#">Компания</a></li>
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Бизнес</a></li>
+                        <li><a href="#">Производство</a></li>
+                        <li><a href="#">Студия</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- page menu END -->
+
+            <!-- page -->
+            <div class="page">
+
+                <!-- content -->
+                <div class="content">
+
+                    <h1>Где купить</h1>
+
+                    <!-- shops filter -->
+                    <div class="shops-filter">
+                        <div class="shops-filter-values">
+                            <div class="shops-filter-values-link"><span>Выбрать город</span></div>
+                            <div class="shops-filter-values-inner"></div>
+                        </div>
+                        <div class="shops-filter-cities">
+                            <div class="shops-filter-cities-col">
+                                <div class="shops-filter-cities-letter">A</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Архангельск</span></li>
+                                        <li><span>Астрахань</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Б</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Балашиха</span></li>
+                                        <li><span>Барнаул</span></li>
+                                        <li><span>Белгород</span></li>
+                                        <li><span>Брянск</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">В</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Владивосток</span></li>
+                                        <li><span>Владимир</span></li>
+                                        <li><span>Волгоград</span></li>
+                                        <li><span>Волжский</span></li>
+                                        <li><span>Воронеж</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Е</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Екатеринбург</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops-filter-cities-col">
+                                <div class="shops-filter-cities-letter">И</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Иваново</span></li>
+                                        <li><span>Ижевск</span></li>
+                                        <li><span>Иркутск</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">К</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Казань</span></li>
+                                        <li><span>Калининград</span></li>
+                                        <li><span>Калуга</span></li>
+                                        <li><span>Кемерово</span></li>
+                                        <li><span>Киров</span></li>
+                                        <li><span>Краснодар</span></li>
+                                        <li><span>Красноярск</span></li>
+                                        <li><span>Курск</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Л</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Липецк</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops-filter-cities-col">
+                                <div class="shops-filter-cities-letter">М</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Магнитогорск</span></li>
+                                        <li><span>Махачкала</span></li>
+                                        <li><span>Москва</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Н</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Набережные Челны</span></li>
+                                        <li><span>Нижний Новгород</span></li>
+                                        <li><span>Нижний Тагил</span></li>
+                                        <li><span>Новокузнецк</span></li>
+                                        <li><span>Новосибирск</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">О</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Омск</span></li>
+                                        <li><span>Оренбург</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">П</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Пенза</span></li>
+                                        <li><span>Пермь</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops-filter-cities-col">
+                                <div class="shops-filter-cities-letter">Р</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Ростов-на-Дону</span></li>
+                                        <li><span>Рязань</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">С</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Самара</span></li>
+                                        <li><span>Санкт-Петербург</span></li>
+                                        <li><span>Саратов</span></li>
+                                        <li><span>Севастополь</span></li>
+                                        <li><span>Симферополь</span></li>
+                                        <li><span>Смоленск</span></li>
+                                        <li><span>Сочи</span></li>
+                                        <li><span>Ставрополь</span></li>
+                                        <li><span>Сургут</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="shops-filter-cities-col">
+                                <div class="shops-filter-cities-letter">Т</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Тверь</span></li>
+                                        <li><span>Тольятти</span></li>
+                                        <li><span>Томск</span></li>
+                                        <li><span>Тула</span></li>
+                                        <li><span>Тюмень</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">У</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Улан-Удэ</span></li>
+                                        <li><span>Ульяновск</span></li>
+                                        <li><span>Уфа</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Х</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Хабаровск</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="shops-filter-cities-letter">Я</div>
+                                <div class="shops-filter-cities-list">
+                                    <ul>
+                                        <li><span>Ярославль</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- shops filter END -->
+
+                    <div class="shops-title">Розничные сети</div>
+
+                    <!-- shops -->
+                    <div class="shops">
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-14.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-14.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">A</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Архангельск</li>
+                                                        <li>Астрахань</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Н</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Набережные Челны</li>
+                                                        <li>Нижний Новгород</li>
+                                                        <li>Нижний Тагил</li>
+                                                        <li>Новокузнецк</li>
+                                                        <li>Новосибирск</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">У</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Улан-Удэ</li>
+                                                        <li>Ульяновск</li>
+                                                        <li>Уфа</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/shop-02.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/shop-02.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Б</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Балашиха</li>
+                                                        <li>Барнаул</li>
+                                                        <li>Белгород</li>
+                                                        <li>Брянск</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">В</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Владивосток</li>
+                                                        <li>Владимир</li>
+                                                        <li>Волгоград</li>
+                                                        <li>Волжский</li>
+                                                        <li>Воронеж</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/shop-03.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/shop-03.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">И</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Иваново</li>
+                                                        <li>Ижевск</li>
+                                                        <li>Иркутск</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">К</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Казань</li>
+                                                        <li>Калининград</li>
+                                                        <li>Калуга</li>
+                                                        <li>Кемерово</li>
+                                                        <li>Киров</li>
+                                                        <li>Краснодар</li>
+                                                        <li>Красноярск</li>
+                                                        <li>Курск</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-07.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-07.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/shop-05.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/shop-05.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-06.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-06.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-01.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-01.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/shop-08.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/shop-08.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-12.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-12.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                        <!-- shop -->
+                        <div class="shop">
+                            <div class="shop-logo"><img src="files/business-partner-19.png" alt="" /></div>
+                            <div class="shop-detail">
+                                <div class="shop-detail-inner">
+                                    <div class="shop-detail-content">
+                                        <div class="shop-detail-header">
+                                            <div class="shop-detail-header-logo"><img src="files/business-partner-19.png" alt="" /></div>
+                                            <div class="shop-detail-header-close"><a href="#" class="shop-detail-close"></a></div>
+                                        </div>
+                                        <div class="shop-detail-cities">
+                                            <div class="shop-detail-cities-col">
+                                                <div class="shop-detail-cities-letter">Т</div>
+                                                <div class="shop-detail-cities-list">
+                                                    <ul>
+                                                        <li>Тверь</li>
+                                                        <li>Тольятти</li>
+                                                        <li>Томск</li>
+                                                        <li>Тула</li>
+                                                        <li>Тюмень</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- shop END -->
+
+                    </div>
+                    <!-- shops END -->
+
+                </div>
+                <!-- content END -->
+
+            </div>
+            <!-- page END -->
+
+            <footer>
+
+                <!-- footer menu -->
+                <div class="footer-menu">
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Компания</a></div>
+                        <div class="footer-menu-list">
+                            <ul>
+                                <li><a href="#">О нас</a></li>
+                                <li><a href="#">История</a></li>
+                                <li><a href="#">Награды</a></li>
+                                <li><a href="#">Новости и события</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Бизнес</a></div>
+                        <div class="footer-menu-list">
+                            <ul>
+                                <li><a href="#">Анкета партнера</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Производство</a></div>
+                        <div class="footer-menu-list">
+                            <ul>
+                                <li><a href="#">О контрактном производстве</a></li>
+                                <li><a href="#">Партнеры</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Студия</a></div>
+                        <div class="footer-menu-list">
+                            <ul>
+                                <li><a href="#">О студии</a></li>
+                                <li><a href="#">Портфолио</a></li>
+                                <li><a href="#">Авторы ароматов</a></li>
+                                <li><a href="#">Партнеры</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Каталог</a></div>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <div class="footer-menu-title"><a href="#">Блог</a></div>
+                    </div>
+                </div>
+                <!-- footer menu END -->
+
+                <!-- bottom -->
+                <div class="bottom">
+                    <div class="bottom-inner">
+                        <div class="bottom-contacts bottom-contacts-big">
+                            <div class="bottom-contacts-title">Россия</div>
+                            <div class="bottom-contacts-item">
+                                <div class="bottom-contacts-address">Офис в Москве:<br /> 127018, Москва,<br /> ул. Полковая дом 3 стр. 4</div>
+                                <div class="bottom-contacts-list">
+                                    <p><a href="tel:+74952801250">+7 (495) 280 12 50</a></p>
+                                    <p><a href="mailto:office@brocard.ru">office@brocard.ru</a></p>
+                                </div>
+                            </div>
+                            <div class="bottom-contacts-item">
+                                <div class="bottom-contacts-address">Производство и склад:<br /> 143532, Московская обл., Истринский район,<br /> г.Дедовск, ул.1-я Волоколамская д.74а</div>
+                                <div class="bottom-contacts-list">
+                                    <p><a href="tel:+74959167248">+7 (495) 916-72-48</a></p>
+                                    <p><a href="mailto:reception@brocard.ru">reception@brocard.ru</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-contacts">
+                            <div class="bottom-contacts-title">Германия</div>
+                            <div class="bottom-contacts-item">
+                                <div class="bottom-contacts-address">Brocard Parfums GmbH<br /> Erdener Strasse 7<br /> 14193 Berlin / Germany</div>
+                                <div class="bottom-contacts-list">
+                                    <p><a href="tel:+4903088011200">+49 (0)30 880 11 200</a></p>
+                                    <p>Fax <a href="tel:+4903088011200">+49 (0)30 880 11 200</a></p>
+                                    <p><a href="mailto:info@brocardgroup.com">info@brocardgroup.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom-right">
+                            <div class="bottom-search">
+                                <form action="#" method="post">
+                                    <div class="bottom-search-input"><input type="text" name="search" value="" placeholder="Поиск по сайту" /></div>
+                                </form>
+                            </div>
+                            <div class="bottom-social">
+                                <a href="#" target="_blank" class="bottom-social-1"></a>
+                                <a href="#" target="_blank" class="bottom-social-2"></a>
+                                <a href="#" target="_blank" class="bottom-social-3"></a>
+                                <a href="#" target="_blank" class="bottom-social-4"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- bottom END -->
+
+            </footer>
+
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>

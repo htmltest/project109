@@ -869,10 +869,10 @@ footer {background:#00959c; padding:0 8.6%}
     .bottom-social a.bottom-social-4::before {background-position:-128px -40px}
 }
 
-.page {padding:0 0 0 240px}
+.page {padding:0 0 0 240px; min-height:100vh}
 
 @media screen and (max-width:1259px) {
-    .page {padding:106px 25px 0 25px}
+    .page {padding:106px 25px 0 25px; min-height:0}
 }
 
 .page-slider {width:100%; position:relative; overflow:hidden; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
@@ -1871,4 +1871,91 @@ h1+.production-about-main-descr {margin:-20px 0 0 0}
     .sitemap-title h2 a {color:#000; text-decoration:none}
     .sitemap-title h2 a::after {content:""; display:inline-block; vertical-align:middle; margin:-2px 0 0 11px; width:17px; height:11px; background:url(../images/sitemap.png) left top}
     .sitemap-title.open h2 a::after {background-position:left -11px}
+}
+
+.shops-filter {margin:-16px 0 0 0}
+.shops-filter-values::after {content:""; display:block; clear:both}
+.shops-filter-values-link {float:left; font-size:14px; line-height:35px; color:#03979e; text-transform:uppercase; margin:0 38px 16px 0}
+.shops-filter-values-link span {border-bottom:2px dashed #03979e; transition:all 0.2s; cursor:pointer}
+.shops-filter-values-link:hover span {border-bottom-color:transparent}
+.shops-filter-values-item {float:left; margin:0 16px 16px 0; border:1px solid #e6e6e6; height:35px; font-size:15px; font-weight:500; line-height:33px; padding:0 12px}
+.shops-filter-cities {display:none; margin:16px -56px 23px -56px; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; padding:5px 56px 33px 56px; font-size:0; line-height:0; letter-spacing:-1px}
+.shops-filter-cities-col {display:inline-block; vertical-align:top; width:20%; font-size:16px; line-height:24px; letter-spacing:0}
+.shops-filter-cities-letter {font-weight:bold; color:#00959c; font-size:16px; text-transform:uppercase; padding:27px 0 0 0}
+.shops-filter-cities-list {font-size:14px; line-height:24px; font-weight:300; color:#000; padding:1px 0 0 0}
+.shops-filter-cities-list ul {margin:0; padding:0; list-style:none}
+.shops-filter-cities-list ul li {margin:0; padding:0}
+.shops-filter-cities-list ul li::before {display:none}
+.shops-filter-cities-list ul li span {display:inline-block; position:relative; cursor:pointer; padding:0 24px 0 0}
+.shops-filter-cities-list ul li span:hover {font-weight:500}
+.shops-filter-cities-list ul li span.active {font-weight:bold; background:url(../images/shops-close.svg) no-repeat right center}
+
+@media screen and (max-width:1259px) {
+    .shops-filter {margin:0 -25px; padding:19px 25px 20px 25px; border-top:1px solid #e0e0e0}
+    .shops-filter-values-inner {float:right; width:calc(100% - 215px); white-space:nowrap; position:relative; overflow:hidden}
+    .shops-filter-values-inner::after {content:""; display:block; position:absolute; right:0; top:0; bottom:0; width:100px; background:url(../images/shops-filter-values-inner-mobile.png)}
+    .shops-filter-values-item {float:none; display:inline; vertical-align:top; margin:0; border:none; height:auto; line-height:35px; padding:0}
+    .shops-filter-values-item::before {content:", "}
+    .shops-filter-values-item:first-child::before {content:""}
+    .shops-filter-values-link {font-size:19px; font-weight:bold; margin:0}
+    .shops-filter-values-link span {border-bottom:none; position:relative; padding:0 30px 0 0}
+    .shops-filter-values-link span::after {content:""; display:block; position:absolute; right:0; top:50%; width:17px; height:9px; margin:-5px 0 0 0; transform:rotate(-180deg); background:url(../images/shops-filter-values-link-mobile.png)}
+    .shops-filter-values-link.open span::after {transform:rotate(0deg)}
+    .shops-filter-cities {margin:20px -25px 0 -25px; padding:0 25px 33px 25px; border-bottom:none}
+    .shops-filter-cities-letter {font-size:17px}
+    .shops-filter-cities-col {width:33.33%}
+    .shops-filter-cities-list {font-size:17px; line-height:20px; padding:0}
+    .shops-filter-cities-list ul li {padding:9px 5px 0 0}
+}
+
+.shops-title {text-transform:uppercase; font-weight:300; font-size:20px; line-height:30px; color:#111; letter-spacing:0.5px}
+
+@media screen and (max-width:1259px) {
+    .shops-title {display:none}
+}
+
+.shops {margin:0 -17px; padding:4px 0 0 0}
+.shops::after {content:""; display:block; clear:both}
+.shop {float:left; width:25%; padding:14px 17px}
+.shop.hidden {display:none}
+.shop-logo {border:1px solid #e6e6e6; height:99px; text-align:center; line-height:97px; cursor:pointer; transition:all 0.2s}
+.shop-logo:hover {border-color:#f0f0f0; box-shadow:0 0 7px 0 rgba(219, 219, 219, 0.71)}
+.shop-logo img {vertical-align:middle}
+
+@media screen and (max-width:1259px) {
+    .shops {margin:0 -25px; padding:20px 10px 0 10px; border-top:2px solid #f1f1f1}
+    .shop {width:50%; padding:10px 15px}
+}
+
+.shop-detail-open body {overflow:hidden}
+
+.shop-detail {display:none; position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:rgba(216, 216, 216, 0.6)}
+.shop-detail.open {display:block}
+.shop-detail-inner {position:absolute; z-index:99999; left:50%; top:50%}
+.shop-detail-content {position:relative; background:#fff; width:571px; margin:0 0 0 -285px}
+.shop-detail-header {display:table; width:100%; border-collapse:collapse; background:#fafafa}
+.shop-detail-header-logo {display:table-cell; vertical-align:middle; line-height:0; padding:0 36px; height:60px}
+.shop-detail-header-logo img {max-height:50px}
+.shop-detail-header-close {display:table-cell; vertical-align:middle; width:35px}
+.shop-detail-close {display:block; width:35px; height:60px; background:url(../images/shops-close.svg) no-repeat left center; transition:all 0.2s}
+.shop-detail-close:hover {opacity:0.8}
+.shop-detail-cities {padding:0 36px 34px 36px}
+.shop-detail-cities::after {content:""; display:block; clear:both}
+.shop-detail-cities-col {float:left; width:33.33%}
+.shop-detail-cities-letter {font-weight:bold; color:#00959c; font-size:16px; text-transform:uppercase; padding:27px 0 0 0}
+.shop-detail-cities-list {font-size:14px; line-height:24px; font-weight:300; color:#000; padding:1px 0 0 0}
+.shop-detail-cities-list ul {margin:0; padding:0; list-style:none}
+.shop-detail-cities-list ul li {margin:0; padding:0}
+.shop-detail-cities-list ul li::before {display:none}
+
+@media screen and (max-width:1259px) {
+    .shop-detail-content {width:480px; margin:0 0 0 -240px}
+    .shop-detail-header-logo {padding:0 25px; height:80px}
+    .shop-detail-header-logo img {max-height:70px}
+    .shop-detail-header-close {width:52px}
+    .shop-detail-close {width:30px; height:28px; background:url(../images/shops-close-mobile.png)}
+    .shop-detail-cities {padding:0 25px 34px 25px}
+    .shop-detail-cities-letter {font-size:17px; padding:19px 0 0 0}
+    .shop-detail-cities-list {font-size:17px; line-height:20px; padding:0}
+    .shop-detail-cities-list ul li {padding:9px 0 0 0}
 }
