@@ -584,18 +584,23 @@ $(document).ready(function() {
         $('.shops-filter-cities').stop(true, true).slideToggle();
     });
 
+    $('.shops-filter-cities-list ul li span').each(function() {
+        $('.shops-filter-values-inner').append('<div class="shops-filter-values-item">' + $(this).html() + '</div>');
+    });
+
     $('.shops-filter-cities-list ul li span').click(function() {
         $(this).toggleClass('active');
         var selectedCities = [];
         $('.shops-filter-cities-list ul li span.active').each(function() {
             selectedCities.push($(this).html());
         });
-        $('.shops-filter-values-item').remove();
-        for (var i = 0; i < selectedCities.length; i++) {
-            $('.shops-filter-values-inner').append('<div class="shops-filter-values-item">' + selectedCities[i] + '</div>');
+        if ($(this).hasClass('active')) {
+            $('.shops-filter-values-item:contains("' + $(this).html() + '")').stop(true, true).fadeIn();
+        } else {
+            $('.shops-filter-values-item:contains("' + $(this).html() + '")').stop(true, true).fadeOut();
         }
         if (selectedCities.length > 0) {
-            $('.shop').each(function() {
+            $('.shop:not(.shop-online)').each(function() {
                 var curShop = $(this);
                 var curResult = false;
                 for (var i = 0; i < selectedCities.length; i++) {
@@ -604,14 +609,21 @@ $(document).ready(function() {
                     }
                 }
                 if (curResult) {
-                    curShop.removeClass('hidden');
+                    curShop.stop(true, true).fadeIn();
                 } else {
-                    curShop.addClass('hidden');
+                    curShop.stop(true, true).fadeOut();
                 }
             });
         } else {
-            $('.shop.hidden').removeClass('hidden');
+            $('.shop').stop(true, true).fadeIn();
         }
+        $('.shops-filter-values-link').removeClass('open');
+        $('.shops-filter-cities').stop(true, true).slideUp();
+    });
+
+    $('body').on('click', '.shops-filter-values-item', function(e) {
+        var curItem = $(this);
+        $('.shops-filter-cities-list ul li span:contains("' + curItem.html() + '")').click();
     });
 
     $('.shop-logo').click(function() {
