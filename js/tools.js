@@ -594,19 +594,26 @@ $(document).ready(function() {
         $('.shops-filter-cities-list ul li span.active').each(function() {
             selectedCities.push($(this).html());
         });
-        if ($(this).hasClass('active')) {
-            $('.shops-filter-values-item:contains("' + $(this).html() + '")').stop(true, true).fadeIn();
-        } else {
-            $('.shops-filter-values-item:contains("' + $(this).html() + '")').stop(true, true).fadeOut();
-        }
+        var curItem = $(this);
+        $('.shops-filter-values-item').each(function() {
+            if ($(this).html() == curItem.html()) {
+                if (curItem.hasClass('active')) {
+                    $(this).stop(true, true).fadeIn();
+                } else {
+                    $(this).stop(true, true).fadeOut();
+                }
+            }
+        });
         if (selectedCities.length > 0) {
             $('.shop:not(.shop-online)').each(function() {
                 var curShop = $(this);
                 var curResult = false;
                 for (var i = 0; i < selectedCities.length; i++) {
-                    if (curShop.find('.shop-detail-cities-list li:contains("' + selectedCities[i] + '")').length > 0) {
-                        curResult = true;
-                    }
+                    curShop.find('.shop-detail-cities-list li').each(function() {
+                        if ($(this).html() == selectedCities[i]) {
+                            curResult = true;
+                        }
+                    });
                 }
                 if (curResult) {
                     curShop.stop(true, true).fadeIn();
@@ -623,7 +630,11 @@ $(document).ready(function() {
 
     $('body').on('click', '.shops-filter-values-item', function(e) {
         var curItem = $(this);
-        $('.shops-filter-cities-list ul li span:contains("' + curItem.html() + '")').click();
+        $('.shops-filter-cities-list ul li span').each(function() {
+            if ($(this).html() == curItem.html()) {
+                $(this).click();
+            }
+        });
     });
 
     $('.shop-logo').click(function() {
